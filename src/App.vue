@@ -1,11 +1,39 @@
 <template>
-  <main>
-    <header class="bg-white shadow" v-if="$route.meta.title">
-      <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-        <h1 class="text-3xl font-bold leading-tight text-gray-900">{{ $route.meta.title }}</h1>
-      </div>
-    </header>
-
-    <router-view />
-  </main>
+  <div id="app">
+    <nav-bar />
+    <main class="container content">
+      <router-view />
+    </main>
+    <footer-bar />
+  </div>
 </template>
+
+<script>
+import NavBar from '@/components/NavBar.vue'
+import FooterBar from '@/components/FooterBar.vue'
+export default {
+  components: { NavBar, FooterBar }
+}
+</script>
+
+<style lang="scss">
+@import '@/assets/scss/custom-vars.scss';
+html, body {
+  background-color: lighten($yellow, 45);
+  height: 100%;
+}
+#app {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  .content {
+    flex-grow: 1;
+    min-height: 100%;
+  }
+  .navbar, .content, footer {
+    flex-shrink: 0;
+  }
+}
+</style>
