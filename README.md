@@ -1,5 +1,7 @@
 # kauf2
 
+Ein Projekt zur Unterstützung der Tafeln.
+
 ## Project setup
 
 ```sh
