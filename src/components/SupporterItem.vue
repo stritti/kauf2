@@ -1,9 +1,9 @@
 <template>
   <b-card
     class="supporter-card"
+    :title="supporter.Name"
     @click="clickURL"
   >
-    <strong>{{ supporter.Name }}</strong>
     <img
       v-if="supporter.Logo"
       :src="supporter.Logo[0].url"
@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     clickURL () {
-      if (this.supporter.Website !== undefined) {
+      if (this.supporter.Website) {
         window.location.href = this.supporter.Website
       }
     }
