@@ -1,22 +1,19 @@
 <template>
   <b-card-group columns>
-    <b-card
+    <supporter-item
       v-for="supporter in supporterList"
       :key="supporter.id"
-    >
-      {{ supporter.Name }}
-      <img
-        v-if="supporter.Logo"
-        :src="supporter.Logo[0].url"
-      >
-    </b-card>
+      :supporter="supporter"
+    />
   </b-card-group>
 </template>
 
 <script>
 import supporterService from '@/services/supporter.service'
+import SupporterItem from './SupporterItem.vue'
 export default {
   name: 'SupporterList',
+  components: { SupporterItem },
   data () {
     return {
       supporterList: null
