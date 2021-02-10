@@ -8,8 +8,13 @@
       v-if="supporter.Logo"
       :src="supporter.Logo[0].url"
     >
-    <b-card-text v-if="supporter.Street">
+    <b-card-text>
       <span v-if="supporter.Street">{{ supporter.Street }}</span><br>
+      <span
+        v-if="supporter.Zip"
+        v-text="supporter.Zip"
+      />
+      &nbsp;
       <span v-if="supporter.City">{{ supporter.City }}</span><br>
       <a
         v-if="supporter.Website"
@@ -45,7 +50,7 @@ img {
 }
 
 .supporter-card {
-  height: 150px;
+  cursor: pointer;
   color: #727272;
   font-size: 0.8em;
   margin-top: 10px;
