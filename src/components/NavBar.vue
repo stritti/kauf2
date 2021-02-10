@@ -6,7 +6,11 @@
   >
     <b-container>
       <b-navbar-brand to="/">
-        kauf2
+        <b-img
+          class="logo"
+          src="@/assets/kauf_2.png"
+          height="30"
+        />
       </b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse" />
@@ -42,8 +46,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import '@/assets/scss/custom-vars.scss';
-  .navbar-light {
-    background-color: $yellow;
+  .logo {
+    transform: rotate(-5deg);
   }
 </style>

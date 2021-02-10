@@ -2,7 +2,7 @@
   <div class="home">
     <b-jumbotron
       header="kauf2"
-      lead="kauf2 - Die Aktion zur Unterstützung der regionalen Tafel Läden"
+      lead="Aktion zur Unterstützung der regionalen Tafel Läden"
     >
       <b-row>
         <b-col md="6">
@@ -22,12 +22,6 @@
           </div>
         </b-col>
       </b-row>
-      <b-button
-        variant="primary"
-        href="#"
-      >
-        Jetzt mitmachen!
-      </b-button>
     </b-jumbotron>
     <section>
       <b-row>
@@ -47,8 +41,7 @@
           </p>
         </b-col>
         <b-col>
-          <div class="cite">
-            <post-it />
+          <div class="bible-text">
             <p>
               Ich habe euch in allem gezeigt, dass man so arbeiten und
               sich der Schwachen annehmen muss im Gedenken an das Wort
@@ -68,20 +61,18 @@
 </template>
 
 <script>
-import PostIt from '@/components/PostIt.vue'
 
 export default {
-  name: 'Home',
-  component: { PostIt }
+  name: 'Home'
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '@/assets/scss/custom-vars.scss';
 .jumbotron {
   background-color: $yellow;
   .logo {
-    transform: rotate(-15deg);
+    transform: rotate(-5deg);
     padding: 2rem;
   }
   .description {
@@ -92,5 +83,17 @@ export default {
 }
 .red {
   color: $red;
+}
+.bible-text {
+  text-decoration:none;
+  color:#000;
+  background:#ffc;
+  display:block;
+  --height:10em;
+  --width:10em;
+  padding:1em;
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  transition: transform .15s linear;
+  transform: rotate(-5deg);
 }
 </style>

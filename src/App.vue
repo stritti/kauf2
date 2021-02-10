@@ -18,7 +18,7 @@ export default {
 
 <style lang="scss">
 @import '@/assets/scss/custom-vars.scss';
-html, body {
+body {
   background-color: lighten($yellow, 45);
   height: 100%;
 }

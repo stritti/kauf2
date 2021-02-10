@@ -4,6 +4,8 @@ $yellow: rgb(255, 237, 0);
 
 $primary: $red;
 
+$enable-responsive-font-sizes: true;
+
 // Import Bootstrap and BootstrapVue source SCSS files
 @import 'bootstrap/scss/bootstrap.scss';
 @import 'bootstrap-vue/src/index.scss';

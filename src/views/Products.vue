@@ -2,23 +2,33 @@
   <div class="about">
     <h1>Produkte</h1>
     <h2>Was sollen wir sammeln? Was wird benötigt?</h2>
-    <p>
-      Die Tafel in deinem Ort wird vermutlich durch Lebensmittelläden,
-      Bäcker, Metzger usw. regelmäßig mit Produkten beliefert.
-    </p>
-    <p>
-      Dabei ist jedoch festzustellen, dass gerade <strong>haltbare Produkte</strong>
-      nicht auf der Liste sind. Das lange Mindeshaltbarkeitsdatum (MHD)
-      ermöglicht einen langfristigen Verkauf.
-    </p>
-    <p>
-      Um jedoch den Menschen, die auf die Tafel angewiesen sind, auch die
-      Möglichkeit zu geben haltbare Produkte zu erwerben, möchten wir mit
-      der <strong>Aktion Kauf2</strong> genau diese Produkte sammeln.
-    </p>
-    <p>
-      Im Folgenden einige Anregungen:
-    </p>
+    <b-row>
+      <b-col cols="8">
+        <p>
+          Die Tafel in deinem Ort wird vermutlich durch Lebensmittelläden,
+          Bäcker, Metzger usw. regelmäßig mit Produkten beliefert.
+        </p>
+        <p>
+          Dabei ist jedoch festzustellen, dass gerade <strong>haltbare Produkte</strong>
+          nicht auf der Liste sind. Das lange Mindeshaltbarkeitsdatum (MHD)
+          ermöglicht einen langfristigen Verkauf.
+        </p>
+        <p>
+          Um jedoch den Menschen, die auf die Tafel angewiesen sind, auch die
+          Möglichkeit zu geben haltbare Produkte zu erwerben, möchten wir mit
+          der <strong>Aktion Kauf2</strong> genau diese Produkte sammeln.
+        </p>
+        <p>
+          Im Folgenden einige Anregungen:
+        </p>
+      </b-col>
+      <b-col>
+        <b-img
+          src="@/assets/dosen.png"
+          fluid
+        />
+      </b-col>
+    </b-row>
     <b-row>
       <b-col
         md="4"
