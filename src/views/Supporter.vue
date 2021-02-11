@@ -1,7 +1,10 @@
 <template>
   <div class="about">
     <h1>Unterstützer</h1>
-    <p>Organisationen, Vereine und Firmen, die die Aktion kauf2 unterstützen:</p>
+    <p>
+      Organisationen, Vereine und Firmen, welche die Aktion
+      <strong>kauf2</strong> unterstützen:
+    </p>
     <supporter-list />
   </div>
 </template>
