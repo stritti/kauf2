@@ -1,9 +1,16 @@
 <template>
   <div class="about">
     <h1>Unterstützer</h1>
-    <p>Organisationen, Vereine und Firmen, die diese Aktion unterstützen.</p>
-    <b-card-group columns>
-      TBD
-    </b-card-group>
+    <p>Organisationen, Vereine und Firmen, die die Aktion kauf2 unterstützen:</p>
+    <supporter-list />
   </div>
 </template>
+
+<script>
+import SupporterList from '@/components/SupporterList.vue'
+
+export default {
+  name: 'Supporter',
+  components: { SupporterList }
+}
+</script>
