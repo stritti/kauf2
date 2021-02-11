@@ -29,8 +29,8 @@
           <b-nav-item to="/kontakt">
             Kontakt
           </b-nav-item>
-          <b-nav-item to="/impressum">
-            Impressum
+          <b-nav-item to="/about">
+            Über
           </b-nav-item>
         </b-navbar-nav>
       </b-collapse>

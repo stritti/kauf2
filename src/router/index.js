@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import { trackRouter } from 'vue-gtag'
 import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
@@ -12,29 +13,35 @@ const routes = [
   },
   {
     path: '/produkte',
-    name: 'Products',
     component: () => import(/* webpackChunkName: "products" */ '../views/Products.vue')
   },
   {
     path: '/supporter',
-    name: 'Supporter',
     component: () => import(/* webpackChunkName: "supporter" */ '../views/Supporter.vue')
   },
   {
     path: '/kontakt',
-    name: 'Contact',
     component: () => import(/* webpackChunkName: "contact" */ '../views/Contact.vue')
   },
   {
-    path: '/impressum',
-    name: 'Imprint',
+    path: '/impessum',
     component: () => import(/* webpackChunkName: "imprint" */ '../views/Imprint.vue')
+  },
+  {
+    path: '/privacy',
+    component: () => import(/* webpackChunkName: "imprint" */ '../views/Privacy.vue')
+  },
+  {
+    path: '/about',
+    component: () => import(/* webpackChunkName: "imprint" */ '../views/About.vue')
   }
+
 ]
 
 const router = new VueRouter({
   routes,
   mode: 'history'
 })
+trackRouter(router)
 
 export default router
