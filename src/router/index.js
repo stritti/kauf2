@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import { trackRouter } from 'vue-gtag'
 import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
@@ -41,5 +42,6 @@ const router = new VueRouter({
   routes,
   mode: 'history'
 })
+trackRouter(router)
 
 export default router
