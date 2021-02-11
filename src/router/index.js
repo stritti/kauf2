@@ -29,7 +29,12 @@ const routes = [
   {
     path: '/privacy',
     component: () => import(/* webpackChunkName: "imprint" */ '../views/Privacy.vue')
+  },
+  {
+    path: '/about',
+    component: () => import(/* webpackChunkName: "imprint" */ '../views/About.vue')
   }
+
 ]
 
 const router = new VueRouter({
