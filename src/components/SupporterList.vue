@@ -1,11 +1,22 @@
 <template>
-  <b-card-group columns>
-    <supporter-item
-      v-for="supporter in supporterList"
-      :key="supporter.id"
-      :supporter="supporter"
-    />
-  </b-card-group>
+  <div>
+    <b-card-group
+      v-if="supporterList"
+      columns
+    >
+      <supporter-item
+        v-for="supporter in supporterList"
+        :key="supporter.id"
+        :supporter="supporter"
+      />
+    </b-card-group>
+    <div
+      v-else
+      class="d-flex align-items-center loading"
+    >
+      <b-spinner /> Lade Daten &hellip;
+    </div>
+  </div>
 </template>
 
 <script>
@@ -30,5 +41,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.loading {
+  min-height: 200px;
+  .spinner-border {
+    margin-right: 0.5rem;
+  }
+}
 </style>

@@ -1,25 +1,32 @@
 <template>
   <b-card
     class="supporter-card"
-    :title="supporter.Name"
     @click="clickURL"
   >
-    <img
-      v-if="supporter.Logo"
-      :src="supporter.Logo[0].url"
-    >
-    <b-card-text>
-      <span v-if="supporter.Street">{{ supporter.Street }}</span><br>
-      <span
-        v-if="supporter.Zip"
-        v-text="supporter.Zip"
+    <template #header>
+      <b-card-img-lazy
+        v-if="supporter.Logo"
+        :src="supporter.Logo[0].url"
       />
-      &nbsp;
-      <span v-if="supporter.City">{{ supporter.City }}</span><br>
-      <a
-        v-if="supporter.Website"
-        :href="supporter.Website"
-      >{{ supporter.Website }}</a>
+      <h4 v-text="supporter.Name" />
+    </template>
+    <b-card-text>
+      <div v-if="supporter.Street">
+        {{ supporter.Street }}
+      </div>
+      <div v-if="supporter.Zip || supporter.City">
+        <span
+          v-if="supporter.Zip"
+          v-text="supporter.Zip"
+        />
+        &nbsp;
+        <span v-if="supporter.City">{{ supporter.City }}</span>
+      </div>
+      <div v-if="supporter.Website">
+        <a
+          :href="supporter.Website"
+        >{{ supporter.Website }}</a>
+      </div>
     </b-card-text>
   </b-card>
 </template>
@@ -43,17 +50,17 @@ export default {
 }
 </script>
 
-<style>
-img {
-  height: 60px;
-  margin-left: 2rem;
-}
+<style lang="scss" scoped>
 
 .supporter-card {
   cursor: pointer;
   color: #727272;
   font-size: 0.8em;
   margin-top: 10px;
+
+  .card-img {
+    max-width: 120px;
+  }
 }
 
 .supporter-card:hover {
