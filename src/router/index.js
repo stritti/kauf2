@@ -12,23 +12,23 @@ const routes = [
   },
   {
     path: '/produkte',
-    name: 'Products',
     component: () => import(/* webpackChunkName: "products" */ '../views/Products.vue')
   },
   {
     path: '/supporter',
-    name: 'Supporter',
     component: () => import(/* webpackChunkName: "supporter" */ '../views/Supporter.vue')
   },
   {
     path: '/kontakt',
-    name: 'Contact',
     component: () => import(/* webpackChunkName: "contact" */ '../views/Contact.vue')
   },
   {
-    path: '/impressum',
-    name: 'Imprint',
+    path: '/impessum',
     component: () => import(/* webpackChunkName: "imprint" */ '../views/Imprint.vue')
+  },
+  {
+    path: '/privacy',
+    component: () => import(/* webpackChunkName: "imprint" */ '../views/Privacy.vue')
   }
 ]
 
