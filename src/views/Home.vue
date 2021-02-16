@@ -5,7 +5,7 @@
       lead="Aktion zur Unterstützung der regionalen Tafel Läden"
     >
       <b-row>
-        <b-col md="6">
+        <b-col md="4">
           <b-img
             class="logo"
             src="@/assets/kauf_2.png"
@@ -14,8 +14,7 @@
         </b-col>
         <b-col>
           <div class="description">
-            <p>Du kaufst ein Produkt?</p>
-            <p>Dann kaufe jetzt <span class="red">zwei</span>:</p>
+            <p>Du kaufst ein Produkt? <br>Dann kaufe jetzt <span class="red">zwei</span>:</p>
             <p>Eines für <span class="red">dich</span></p>
             <p>&amp;</p>
             <p>Eines für <span class="red">die Tafel</span>!</p>
@@ -54,6 +53,52 @@
               &dash; Apostelgeschichte 20, 35
             </p>
           </div>
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col cols="8">
+          <h2>Mach mit!</h2>
+          <p>
+            Du willst mit machen? Es ist ganz einfach:
+          </p>
+          <ul>
+            <li>
+              Such Dir ein Team: deine Arbeitskollegen,
+              deine Kirchengemeinde, dein Verein, &hellip;
+            </li>
+            <li>
+              Motiviere diese mit zu machen!
+            </li>
+            <li>
+              Richte eine Sammelstelle für die Lebensmittel
+              ein, wo du mit deinem Team die Produkte sammelst.
+            </li>
+            <li>
+              Wenn eine Ration zusammen gekommen ist, nimm mit
+              der Tafel in deinem Wohnort Kontakt auf, um die
+              Lebensmittel zu übergeben.
+            </li>
+            <li>
+              Berichte uns, damit wir dein Team mit bei den <router-link to="/supporter">
+                Unterstützern
+              </router-link> aufnehmen.
+            </li>
+          </ul>
+          <p>
+            Die Aktion ist weder zeitlich noch sonstwie gebunden.
+          </p>
+          <p>
+            Die Aktion Kauf2 soll eine nachhaltige Aktion sein,
+            die zu einer zuverlässigen Lieferquelle deiner Tafel
+            vor Ort wird!
+          </p>
+          <p>Machmit, hilf mit!</p>
+        </b-col>
+        <b-col>
+          <b-img
+            src="@/assets/dosen.png"
+            width="220"
+          />
         </b-col>
       </b-row>
     </section>
