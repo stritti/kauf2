@@ -97,8 +97,10 @@
           </p>
           <b-button
             to="supporter/request"
-            class="my-5"
+            class="my-3 mx-auto"
+            style="width: 240px;"
             variant="primary"
+            size="lg"
           >
             Jetzt registrieren &hellip;
           </b-button>
@@ -106,14 +108,14 @@
         <b-col>
           <b-img
             src="@/assets/dosen.png"
-            width="220"
+            fluid
           />
         </b-col>
       </b-row>
     </section>
     <section class="my-5">
       <h3>Unterstützende Teams</h3>
-      <list random-number="3" />
+      <list :random-number="numberSupporter" />
       <router-link
         to="/supporter"
       >
@@ -128,7 +130,12 @@ import List from '@/components/supporter/List.vue'
 
 export default {
   name: 'Home',
-  components: { List }
+  components: { List },
+  data () {
+    return {
+      numberSupporter: 3
+    }
+  }
 }
 </script>
 

@@ -41,9 +41,22 @@ const routes = [
 
 ]
 
+// scrollBehavior:
+// - only available in html5 history mode
+// - defaults to no scroll behavior
+// - return false to prevent scroll
+const scrollBehavior = function (to, from, savedPosition) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve({ x: 0, y: 0 })
+    }, 500)
+  })
+}
+
 const router = new VueRouter({
-  routes,
-  mode: 'history'
+  mode: 'history',
+  scrollBehavior,
+  routes
 })
 
 export default router
