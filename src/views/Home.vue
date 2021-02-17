@@ -22,7 +22,7 @@
         </b-col>
       </b-row>
     </b-jumbotron>
-    <section>
+    <section class="my-5">
       <b-row>
         <b-col md="6">
           <h2>Kauf2: die Idee</h2>
@@ -97,7 +97,7 @@
           </p>
           <b-button
             to="supporter/request"
-            class="my-3"
+            class="my-5"
             variant="primary"
           >
             Jetzt registrieren &hellip;
@@ -111,13 +111,24 @@
         </b-col>
       </b-row>
     </section>
+    <section class="my-5">
+      <h3>Unterstützende Teams</h3>
+      <list random-number="3" />
+      <router-link
+        to="/supporter"
+      >
+        Weitere Teams &hellip;
+      </router-link>
+    </section>
   </div>
 </template>
 
 <script>
+import List from '@/components/supporter/List.vue'
 
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: { List }
 }
 </script>
 
