@@ -1,5 +1,5 @@
 <template>
-  <div class="privacy">
+  <div class="privacy mt-5">
     <h1>Datenschutz</h1>
     <p>
       Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten

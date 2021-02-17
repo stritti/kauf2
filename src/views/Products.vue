@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="products mt-5">
     <h1>Produkte</h1>
     <h2>Was sollen wir sammeln? Was wird benötigt?</h2>
     <b-row>
@@ -94,8 +94,10 @@
       >
         <h3>Hygieneartikel</h3>
         <ul>
-          <li>Zahnpasta</li>
+          <li>Zahnbürste &amp; Zahnpasta</li>
           <li>Duschgel</li>
+          <li>Shampoo</li>
+          <li>Seife</li>
         </ul>
       </b-col>
       <b-col
