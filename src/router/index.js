@@ -19,6 +19,10 @@ const routes = [
     component: () => import(/* webpackChunkName: "supporter" */ '../views/Supporter.vue')
   },
   {
+    path: '/supporter/request',
+    component: () => import(/* webpackChunkName: "supporter" */ '../views/SupporterRequest.vue')
+  },
+  {
     path: '/kontakt',
     component: () => import(/* webpackChunkName: "contact" */ '../views/Contact.vue')
   },

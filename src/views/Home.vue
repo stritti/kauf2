@@ -14,7 +14,7 @@
         </b-col>
         <b-col>
           <div class="description">
-            <p>Du kaufst ein Produkt? <br>Dann kaufe jetzt <span class="red">zwei</span>:</p>
+            <p>Du kaufst ein Produkt? Dann kaufe jetzt <span class="red">zwei</span>:</p>
             <p>Eines für <span class="red">dich</span></p>
             <p>&amp;</p>
             <p>Eines für <span class="red">die Tafel</span>!</p>
@@ -25,7 +25,7 @@
     <section>
       <b-row>
         <b-col md="6">
-          <h2>kauf2: die Idee</h2>
+          <h2>Kauf2: die Idee</h2>
           <p>
             Sammle mit einem Team haltbare Lebensmittel
             (Konserven, Einmachgläser, Instant-Produkte,...)
@@ -36,7 +36,7 @@
             wird diese an die Tafel übergeben.
           </p>
           <p>
-            Jeder kann mit machen!
+            <strong>Jeder kann mit machen!</strong>
           </p>
         </b-col>
         <b-col>
@@ -56,7 +56,10 @@
         </b-col>
       </b-row>
       <b-row>
-        <b-col cols="8">
+        <b-col
+          cols="8"
+          sm="8"
+        >
           <h2>Mach mit!</h2>
           <p>
             Du willst mit machen? Es ist ganz einfach:
@@ -70,29 +73,35 @@
               Motiviere diese mit zu machen!
             </li>
             <li>
+              Registriere dich, damit wir dein Team mit bei den <router-link to="/supporter">
+                Unterstützern
+              </router-link> veröffentlichen.
+            </li>
+            <li>
               Richte eine Sammelstelle für die Lebensmittel
               ein, wo du mit deinem Team die Produkte sammelst.
             </li>
             <li>
               Wenn eine Ration zusammen gekommen ist, nimm mit
-              der Tafel in deinem Wohnort Kontakt auf, um die
-              Lebensmittel zu übergeben.
-            </li>
-            <li>
-              Berichte uns, damit wir dein Team mit bei den <router-link to="/supporter">
-                Unterstützern
-              </router-link> aufnehmen.
+              der Tafel in deinem Wohnort Kontakt auf, um eine
+              Übergabe zu vereinbaren.
             </li>
           </ul>
           <p>
             Die Aktion ist weder zeitlich noch sonstwie gebunden.
           </p>
           <p>
-            Die Aktion Kauf2 soll eine nachhaltige Aktion sein,
+            Die Aktion <strong>Kauf2</strong> soll eine nachhaltige Aktion sein,
             die zu einer zuverlässigen Lieferquelle deiner Tafel
-            vor Ort wird!
+            vor Ort wird.
           </p>
-          <p>Machmit, hilf mit!</p>
+          <b-button
+            to="supporter/request"
+            class="my-3"
+            variant="primary"
+          >
+            Jetzt registrieren &hellip;
+          </b-button>
         </b-col>
         <b-col>
           <b-img
@@ -137,6 +146,7 @@ export default {
   --height:10em;
   --width:10em;
   padding:1em;
+  margin: 1em;
   box-shadow: 5px 5px 7px rgba(33,33,33,.7);
   transition: transform .15s linear;
   transform: rotate(-5deg);

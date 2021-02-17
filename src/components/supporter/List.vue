@@ -4,7 +4,7 @@
       v-if="supporterList"
       columns
     >
-      <supporter-item
+      <list-item
         v-for="supporter in supporterList"
         :key="supporter.id"
         :supporter="supporter"
@@ -21,10 +21,10 @@
 
 <script>
 import supporterService from '@/services/supporter.service'
-import SupporterItem from './SupporterItem.vue'
+import ListItem from './ListItem.vue'
 export default {
-  name: 'SupporterList',
-  components: { SupporterItem },
+  name: 'List',
+  components: { ListItem },
   data () {
     return {
       supporterList: null
