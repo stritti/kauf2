@@ -18,6 +18,7 @@
         </template>
         <b-card-text>
           Du möchtest dein Team auch hier aufgelistet sehen?
+          <br>
           <b-button
             to="supporter/request"
             class="my-3"
