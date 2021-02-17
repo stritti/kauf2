@@ -33,7 +33,7 @@
 
 <script>
 export default {
-  name: 'SupporterItem',
+  name: 'ListItem',
   props: {
     supporter: {
       type: Object,
@@ -51,12 +51,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .supporter-card {
   cursor: pointer;
-  color: #727272;
   font-size: 0.8em;
-  margin-top: 10px;
 
   .card-img {
     max-width: 120px;
@@ -67,9 +64,4 @@ export default {
   box-shadow: 0 0 5px #727272;
   transition: ease-in-out 0.35s;
 }
-
-a {
-  color: rgb(67, 67, 189);
-}
-
 </style>
