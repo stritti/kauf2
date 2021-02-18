@@ -45,7 +45,6 @@
           <li>Karottengemüse</li>
           <li>Erbsen</li>
           <li>Rotkraut</li>
-          <li>Sauerkraut</li>
           <li>Ravioli</li>
           <li>Bohneneintopf</li>
           <li>Tomatenmark</li>
