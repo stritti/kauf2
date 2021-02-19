@@ -44,8 +44,6 @@
           <li>Mais</li>
           <li>Karottengemüse</li>
           <li>Erbsen</li>
-          <li>Rotkraut</li>
-          <li>Ravioli</li>
           <li>Bohneneintopf</li>
           <li>Tomatenmark</li>
           <li>Dosenmilch</li>
@@ -71,7 +69,6 @@
           <li>Apfelmus</li>
           <li>Schattenmorellen</li>
           <li>Oliven</li>
-          <li>Silberzwiebeln</li>
         </ul>
       </b-col>
       <b-col
@@ -81,9 +78,7 @@
         <h3>Instant Produkte</h3>
         <ul>
           <li>Kakao</li>
-          <li>Aufbrüh-Suppen</li>
-          <li>Fertigsoßen</li>
-          <li>Tee</li>
+          <li>Schwarztee</li>
           <li>Kaffee</li>
         </ul>
       </b-col>
@@ -93,7 +88,7 @@
       >
         <h3>Hygieneartikel</h3>
         <ul>
-          <li>Zahnbürste &amp; Zahnpasta</li>
+          <li>Zahnbürste &amp; Zahncreme</li>
           <li>Duschgel</li>
           <li>Shampoo</li>
           <li>Seife</li>
@@ -107,7 +102,11 @@
         <ul>
           <li>Nudeln</li>
           <li>Reis</li>
+          <li>Linsen</li>
           <li>Salz</li>
+          <li>Zucker</li>
+          <li>Mehl</li>
+          <li>Sonnenblumenöl</li>
           <li>&hellip;</li>
         </ul>
       </b-col>
