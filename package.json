@@ -10,7 +10,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "bootstrap-vue": "^2.21.2",
-    "core-js": "^3.6.5",
+    "core-js": "^3.9.0",
     "dotenv": "^8.2.0",
     "vue": "^2.6.11",
     "vue-gtag": "^1.11.0",
