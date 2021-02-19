@@ -92,6 +92,8 @@
           <li>Duschgel</li>
           <li>Shampoo</li>
           <li>Seife</li>
+          <li>Spülmittel, Allzweckreiniger</li>
+          <li>Waschpulver (kleine Packungen)</li>
         </ul>
       </b-col>
       <b-col
