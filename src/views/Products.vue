@@ -114,3 +114,11 @@
     </b-row>
   </div>
 </template>
+<script>
+export default {
+  name: 'Products',
+  metaInfo: {
+    title: 'Übersicht von Produkten'
+  }
+}
+</script>

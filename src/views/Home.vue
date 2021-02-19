@@ -131,6 +131,9 @@ import List from '@/components/supporter/List.vue'
 export default {
   name: 'Home',
   components: { List },
+  metaInfo: {
+    title: 'Kauf2'
+  },
   data () {
     return {
       numberSupporter: 3

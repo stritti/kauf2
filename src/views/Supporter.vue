@@ -25,6 +25,9 @@ import List from '@/components/supporter/List.vue'
 
 export default {
   name: 'Supporter',
-  components: { List }
+  components: { List },
+  metaInfo: {
+    title: 'Unterstützer der Aktion'
+  }
 }
 </script>

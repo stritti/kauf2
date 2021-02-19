@@ -13,7 +13,10 @@ import CreateForm from '@/components/supporter/CreateForm.vue'
 
 export default {
 
-  components: { CreateForm }
+  components: { CreateForm },
+  metaInfo: {
+    title: 'Anfrage Unterstützer-Teams'
+  }
 }
 </script>
 

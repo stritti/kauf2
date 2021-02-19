@@ -216,7 +216,10 @@
 
 <script>
 export default {
-
+  name: 'Privacy',
+  metaInfo: {
+    title: 'Datenschutz'
+  }
 }
 </script>
 

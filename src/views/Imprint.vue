@@ -61,6 +61,15 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'Imprint',
+  metaInfo: {
+    title: 'Impressum'
+  }
+}
+</script>
+
 <style lang="scss">
 .imprint {
   h2, h3, p {

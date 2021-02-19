@@ -4,3 +4,11 @@
     <p>Kommt bald ...</p>
   </div>
 </template>
+
+<script>
+export default {
+  metaInfo: {
+    title: 'Über Kauf2'
+  }
+}
+</script>
