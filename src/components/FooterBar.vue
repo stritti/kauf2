@@ -1,9 +1,13 @@
 <template>
-  <footer>
+  <footer class="pb-5">
     <b-container class="navbar-dark">
       <nav class="navbar-nav">
         <b-row>
-          <b-col>
+          <b-col
+            cols="4"
+            md="4"
+            sm="12"
+          >
             <router-link
               to="/"
               class="nav-link"
@@ -11,15 +15,48 @@
               &copy; {{ year }} Kauf2
             </router-link>
           </b-col>
-          <b-col>
+          <b-col
+            cols="4"
+            md="4"
+            sm="12"
+          >
+            <router-link
+              to="/supporter"
+              class="nav-link"
+            >
+              Unterstützer
+            </router-link>
+            <router-link
+              to="/supporter/request"
+              class="nav-link"
+            >
+              Mitmachen: Team anmelden
+            </router-link>
+
+            <router-link
+              to="/produkte"
+              class="nav-link"
+            >
+              Produktliste
+            </router-link>
+          </b-col>
+          <b-col
+            cols="4"
+            md="4"
+            sm="12"
+          >
+            <router-link
+              to="/kontakt"
+              class="nav-link"
+            >
+              Kontakt
+            </router-link>
             <router-link
               to="/impessum"
               class="nav-link"
             >
               Impressum
             </router-link>
-          </b-col>
-          <b-col>
             <router-link
               to="/privacy"
               class="nav-link"
