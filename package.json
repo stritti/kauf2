@@ -10,7 +10,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "bootstrap-vue": "^2.21.2",
-    "core-js": "^3.11.1",
+    "core-js": "^3.11.2",
     "dotenv": "^8.2.0",
     "vue": "^2.6.11",
     "vue-cookie-law": "^1.13.3",
