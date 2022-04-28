@@ -36,7 +36,7 @@ body {
 
   .content {
     flex-grow: 1;
-    min-height: 100%;
+    min-height: calc(100vh - 119px);
   }
   .navbar, .content, footer {
     flex-shrink: 0;

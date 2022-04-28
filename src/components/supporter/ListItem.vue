@@ -7,10 +7,14 @@
       <b-card-img-lazy
         v-if="supporter.Logo"
         :src="supporter.Logo[0].url"
+        class="supporter-card__logo"
       />
-      <h4 v-text="supporter.Name" />
+      <h3
+        class="supporter-card__name"
+        v-text="supporter.Name"
+      />
     </template>
-    <b-card-text>
+    <b-card-text class="supporter-card__address">
       <div v-if="supporter.Street">
         {{ supporter.Street }}
       </div>
@@ -54,6 +58,14 @@ export default {
 .supporter-card {
   cursor: pointer;
   font-size: 0.8em;
+
+  &__logo {
+    height: 4rem;
+    width: auto;
+  }
+  &__name {
+    font-size: 1.5rem;
+  }
 
   .card-img {
     max-width: 120px;

@@ -96,4 +96,11 @@ export default {
     background-color: $yellow;
   }
 }
+.staggered-transition {
+    transition: all .5s ease;
+    opacity: 1;
+}
+.staggered-enter, .staggered-leave {
+    opacity: 0;
+}
 </style>

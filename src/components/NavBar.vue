@@ -8,7 +8,7 @@
       <b-navbar-brand to="/">
         <b-img
           class="logo"
-          src="@/assets/kauf_2.png"
+          src="/img/kauf_2.png"
           height="30"
         />
       </b-navbar-brand>

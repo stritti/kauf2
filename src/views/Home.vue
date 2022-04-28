@@ -8,7 +8,7 @@
         <b-col md="4">
           <b-img
             class="logo"
-            src="@/assets/kauf_2.png"
+            src="/img/kauf_2.png"
             fluid
           />
         </b-col>
@@ -107,7 +107,7 @@
         </b-col>
         <b-col>
           <b-img
-            src="@/assets/dosen.png"
+            src="/img/dosen.png"
             fluid
           />
         </b-col>

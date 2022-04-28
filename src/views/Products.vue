@@ -24,7 +24,7 @@
       </b-col>
       <b-col>
         <b-img
-          src="@/assets/dosen.png"
+          src="/img/dosen.png"
           fluid
         />
       </b-col>
