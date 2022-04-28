@@ -16,7 +16,7 @@
     "vue-cookie-law": "^1.13.3",
     "vue-gtag": "^1.16.1",
     "vue-meta": "^2.4.0",
-    "vue-router": "^3.5.2"
+    "vue-router": "^3.5.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.4",
