@@ -1,5 +1,5 @@
 <template>
-  <div class="privacy mt-5">
+  <b-container class="privacy mt-5">
     <h1>Datenschutz</h1>
     <p>
       Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten
@@ -211,7 +211,7 @@
         rel="nofollow"
       >https://policies.google.com/technologies/cookies?hl=en</a>
     </p>
-  </div>
+  </b-container>
 </template>
 
 <script>

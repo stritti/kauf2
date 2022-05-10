@@ -1,11 +1,11 @@
 <template>
-  <div class="supporter-request mt-5">
+  <b-container class="supporter-request mt-5">
     <h1>Unterstützer werden</h1>
     <p>
       Ja, wir beteiligen uns als Team an der Aktion <strong>kauf2</strong>!
     </p>
     <create-form />
-  </div>
+  </b-container>
 </template>
 
 <script>

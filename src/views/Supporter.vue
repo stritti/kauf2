@@ -1,5 +1,5 @@
 <template>
-  <div class="supporter mt-5">
+  <b-container class="supporter mt-5">
     <h1>Unterstützer</h1>
     <p>
       Organisationen, Vereine und Firmen, welche die Aktion
@@ -16,18 +16,18 @@
         Jetzt registrieren &hellip;
       </b-button>
     </p>
-    <list />
-  </div>
+    <supporter-list />
+  </b-container>
 </template>
 
 <script>
-import List from '@/components/supporter/List.vue'
+import SupporterList from '@/components/supporter/SupporterList.vue'
 
 export default {
   name: 'Supporter',
-  components: { List },
+  components: { SupporterList },
   metaInfo: {
-    title: 'Unterstützer der Aktion'
+    title: 'Unterstützer der Aktion kauf2'
   }
 }
 </script>

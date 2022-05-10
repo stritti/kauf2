@@ -1,8 +1,8 @@
 <template>
-  <div class="contact mt-5">
+  <b-container class="contact mt-5">
     <h1>Kontakt</h1>
     <contact-form />
-  </div>
+  </b-container>
 </template>
 
 <script>

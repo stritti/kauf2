@@ -1,9 +1,14 @@
 <template>
-  <div class="about mt-5">
-    <h1>Über das Projekt kauf2</h1>
+  <b-container class="about mt-5">
+    <h1>Über die Aktion kauf2</h1>
     <p>
-      Dieses Projekt wurde als Idee 2015 gestartet und wird seitdem
-      immer wieder erfolgreich regional umgesetzt.
+      Dieses Projekt 'kauf2' wurde 2015 in Stockach am Bodensee zu erntedank in einer Kirchengemeinde gestartet
+      und in den folgenden Jahren wiederholt. Seit 2020 wird die Aktion in der Stadt Stockach durch weitere
+      christlichen Kirchen im ökumenischen Rahmen unterstützt und wurde zu einer kontinuierlichen Aktion.
+    </p>
+    <p>
+      Die Aktion ist so angelegt, dass verschiedene Gruppen (Vereine, Firmen, Kirchengemeinden) die Aktion
+      einfach unterstützen können. Ob punktuell zu einem bestimmten Termin oder als kontinuierliche Aktion.
     </p>
     <p>
       Diese Webseite wurde privat erstellt und wird auch privat betrieben.
@@ -21,7 +26,7 @@
         alt="Buy Me a Coffee at ko-fi.com"
       ></a>
     </p>
-  </div>
+  </b-container>
 </template>
 
 <script>

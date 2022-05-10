@@ -1,5 +1,5 @@
 <template>
-  <div class="imprint mt-5">
+  <b-container class="imprint mt-5">
     <h1>Impressum</h1>
     <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
     <p>
@@ -58,7 +58,7 @@
     <p>
       Quelle: http://www.e-recht24.de
     </p>
-  </div>
+  </b-container>
 </template>
 
 <script>

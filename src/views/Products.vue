@@ -1,5 +1,5 @@
 <template>
-  <div class="products mt-5">
+  <b-container class="products mt-5">
     <h1>Produkte</h1>
     <h2>Was sollen wir sammeln? Was wird benötigt?</h2>
     <b-row>
@@ -38,18 +38,18 @@
         <template #header>
           <h4 v-text="category.Name" />
         </template>
-        <list :category-id="category.CategoryId" />
+        <product-list :category-id="category.CategoryId" />
       </b-card>
     </b-card-group>
-  </div>
+  </b-container>
 </template>
 <script>
-import List from '@/components/product/List.vue'
+import ProductList from '@/components/product/ProductList.vue'
 import productCategoryService from '@/services/productCategory.service'
 
 export default {
   name: 'Products',
-  components: { List },
+  components: { ProductList },
   data () {
     return {
       productCategoryList: []
