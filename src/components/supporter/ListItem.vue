@@ -19,7 +19,7 @@
         {{ supporter.Street }}
       </div>
       <div v-if="supporter.Zip || supporter.City">
-        <span v-if="supporter.Zip">{{supporter.Zip}}</span>
+        <span v-if="supporter.Zip">{{supporter.Zip}}&nbsp;</span>
         <span v-if="supporter.City">{{ supporter.City }}</span>
       </div>
       <div v-if="supporter.Website">
