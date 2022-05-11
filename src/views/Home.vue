@@ -3,17 +3,18 @@
     <b-jumbotron>
       <b-container>
         <b-row>
-          <b-col md="4">
+          <b-col md="6">
             <b-img
               class="logo"
               src="/img/kauf_2.png"
               fluid
             />
-            <h3>kauf2 - Aktion zur Unterstützung des regionalen Tafelladen</h3>
+            <h3>kauf2 - Aktion zur Unterstützung des Tafelladens in deiner Nähe</h3>
           </b-col>
           <b-col>
             <div class="description mt-5">
-              <p>Du kaufst ein Produkt? Dann kaufe jetzt <span class="red">zwei</span>:</p>
+              <p>Du kaufst ein Produkt? </p>
+              <p>Dann kaufe jetzt <span class="red">zwei</span>:</p>
               <p>Eines für <span class="red">dich</span></p>
               <p>&amp;</p>
               <p>Eines für <span class="red">die Tafel</span>!</p>
@@ -52,7 +53,7 @@
                 Geben ist seliger als nehmen.
               </p>
               <p>
-                &dash; Apostelgeschichte 20, 35
+                &dash; Bibel: Apostelgeschichte 20, 35
               </p>
             </div>
           </b-col>
@@ -68,7 +69,7 @@
             </p>
             <ul>
               <li>
-                Such Dir ein Team: deine Arbeitskolleg:innen,
+                Such Dir ein Team: deine Arbeitskolleg:innen, deine Schule,
                 deine Kirchengemeinde, dein Verein, &hellip;
               </li>
               <li>
@@ -119,13 +120,15 @@
       </section>
 
       <section class="my-5">
-        <h3>Unterstützende Teams</h3>
+        <h3 class="my-5">Unterstützende Teams</h3>
+
         <supporter-list :random-number="numberSupporter" />
-        <router-link
-          to="/supporter"
-        >
-          Weitere Teams &hellip;
-        </router-link>
+
+        <p class="my-3">
+          <router-link to="/supporter">
+            <strong>Weitere Teams &hellip;</strong>
+          </router-link>
+        </p>
       </section>
     </b-container>
   </div>
@@ -171,7 +174,7 @@ export default {
     padding: 2rem;
   }
   .description {
-    font-size: 1.5rem;
+    font-size: calc(1.3rem + 0.6vw);
     font-weight: 600;
     text-align: center;
   }
