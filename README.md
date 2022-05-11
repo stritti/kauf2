@@ -1,8 +1,16 @@
 # kauf2
 
-Ein Projekt zur Unterstützung der Tafeln.
+Landingpage für die Aktion kauf2. Ein Projekt zur Unterstützung der Tafelläden.
 
-## Project setup
+https://kauf2.vercel.app/
+
+---
+
+## Development
+
+Project is based on vue.js, Airtable and boostrap-vue.
+
+### Project setup
 
 ```sh
 npm install
