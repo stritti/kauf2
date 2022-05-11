@@ -141,21 +141,7 @@ export default {
   name: 'Home',
   components: { SupporterList },
   metaInfo: {
-    title: 'Kauf2',
-    meta: [
-      // Twitter Card
-      { name: 'twitter:card', content: 'kauf2, eine Aktion zur Unterstützung der Tafelläden' },
-      { name: 'twitter:title', content: 'kauf2, eine Aktion zur Unterstützung der Tafelläden' },
-      { name: 'twitter:description', content: 'kauf2, eine Aktion zur Unterstützung der Tafelläden' },
-      // image must be an absolute path
-      // { name: 'twitter:image', content: this.logo },
-      // Facebook OpenGraph
-      { property: 'og:title', content: 'kauf2, eine Aktion zur Unterstützung der Tafelläden' },
-      { property: 'og:site_name', content: 'kauf2' },
-      { property: 'og:type', content: 'website' },
-      // { property: 'og:image', content: this.logo },
-      { property: 'og:description', content: 'kauf2, eine Aktion zur Unterstützung der Tafelläden' }
-    ]
+    title: 'Aktion kauf2'
   },
   data () {
     return {
