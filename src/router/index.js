@@ -23,6 +23,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "supporter" */ '../views/SupporterRequest.vue')
   },
   {
+    path: '/supporter/:supporterId/poster',
+    props: true,
+    component: () => import(/* webpackChunkName: "supporter" */ '../views/SupporterPosterView.vue')
+  },
+  {
     path: '/kontakt',
     component: () => import(/* webpackChunkName: "contact" */ '../views/Contact.vue')
   },

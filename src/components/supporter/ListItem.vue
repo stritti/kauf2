@@ -1,19 +1,25 @@
 <template>
   <b-card
     class="supporter-card"
-    @click="clickURL"
   >
     <template #header>
       <b-card-img-lazy
         v-if="supporter.Logo"
         :src="supporter.Logo[0].thumbnails.large.url"
         class="supporter-card__logo"
+        @click="clickURL"
       />
-      <h3 class="supporter-card__name">
+      <h3
+        class="supporter-card__name"
+        @click="clickURL"
+      >
         {{ supporter.Name }}
       </h3>
     </template>
-    <b-card-text class="supporter-card__address">
+    <b-card-text
+      class="supporter-card__address"
+      @click="clickURL"
+    >
       <div v-if="supporter.Street">
         {{ supporter.Street }}
       </div>
@@ -27,6 +33,11 @@
           target="_blank"
           rel="noopener noreferrer"
         >{{ supporter.Website }}</a>
+      </div>
+    </b-card-text>
+    <b-card-text>
+      <div>
+        <a :href="`/supporter/${supporter.id}/poster`" target="_blank">Poster drucken ...</a>
       </div>
     </b-card-text>
   </b-card>

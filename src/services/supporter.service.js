@@ -13,6 +13,11 @@ const supporterService = {
 
     return resultList
   },
+  async getSupporter (supporterId) {
+    const response = await airtableBase.get(`${TABLE_NAME}/${supporterId}`)
+    const result = response.data.fields
+    return result
+  },
   /*
     This is used for both creating and updating API records
     the default method is POST for creating a new item
