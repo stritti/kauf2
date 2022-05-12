@@ -36,7 +36,7 @@ const routes = [
   },
   {
     path: '/presse',
-    component: () => import(/* webpackChunkName: "press" */ '../views/Press.vue')
+    component: () => import(/* webpackChunkName: "press" */ '../views/PressView.vue')
   },
   {
     path: '/about',

@@ -6,13 +6,12 @@
     <template #header>
       <b-card-img-lazy
         v-if="supporter.Logo"
-        :src="supporter.Logo[0].url"
+        :src="supporter.Logo[0].thumbnails.large.url"
         class="supporter-card__logo"
       />
-      <h3
-        class="supporter-card__name"
-        v-text="supporter.Name"
-      />
+      <h3 class="supporter-card__name">
+        {{ supporter.Name }}
+      </h3>
     </template>
     <b-card-text class="supporter-card__address">
       <div v-if="supporter.Street">
@@ -25,6 +24,8 @@
       <div v-if="supporter.Website">
         <a
           :href="supporter.Website"
+          target="_blank"
+          rel="noopener noreferrer"
         >{{ supporter.Website }}</a>
       </div>
     </b-card-text>

@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="footer">
     <b-container class="navbar-dark d-print-none pb-5">
       <nav class="navbar-nav">
         <b-row>
@@ -12,6 +12,9 @@
               to="/"
               class="nav-link"
             >
+              <b-img
+                class="footer__logo"
+                src="/img/kauf_2.svg" />
               &copy; 2015 - {{ year }} Aktion kauf2
             </router-link>
           </b-col>
@@ -50,6 +53,12 @@
               class="nav-link"
             >
               Kontakt
+            </router-link>
+            <router-link
+              to="/presse"
+              class="nav-link"
+            >
+              Presse
             </router-link>
             <router-link
               to="/impessum"
@@ -105,11 +114,17 @@ export default {
 
 <style lang="scss">
   @import '@/assets/scss/custom-vars.scss';
-  footer {
+  .footer {
     color: $light;
     background-color: $dark;
     min-height: 60px;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+
+    &__logo {
+      height: 1.5rem;
+      transform: rotate(-5deg);
+      filter: grayscale(80%);
+    }
   }
 </style>
