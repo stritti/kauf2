@@ -3,11 +3,7 @@
     <b-container class="navbar-dark d-print-none pb-5">
       <nav class="navbar-nav">
         <b-row>
-          <b-col
-            cols="4"
-            md="4"
-            sm="12"
-          >
+          <b-col>
             <router-link
               to="/"
               class="nav-link"
@@ -19,8 +15,8 @@
             </router-link>
           </b-col>
           <b-col
-            cols="4"
-            md="4"
+            cols="3"
+            md="3"
             sm="12"
           >
             <router-link
@@ -44,8 +40,8 @@
             </router-link>
           </b-col>
           <b-col
-            cols="4"
-            md="4"
+            cols="3"
+            md="3"
             sm="12"
           >
             <router-link
@@ -73,6 +69,34 @@
               Datenschutz
             </router-link>
           </b-col>
+          <b-col
+            cols="3"
+            md="3"
+            sm="12"
+          >
+            <b-row>
+              <b-col cols="1">
+                <a
+                  href="https://www.twitter.com/aktion_kauf2"
+                  rel="noopener"
+                  target="_blank"
+                  class="nav-link"
+                >
+                  <b-icon icon="twitter" />
+                </a>
+              </b-col>
+              <b-col cols="1">
+                <a
+                  href="https://www.instagram.com/explore/tags/kauf2/"
+                  rel="noopener"
+                  target="_blank"
+                  class="nav-link"
+                >
+                  <b-icon icon="instagram" />
+                </a>
+              </b-col>
+            </b-row>
+          </b-col>
         </b-row>
       </nav>
     </b-container>
@@ -96,9 +120,10 @@
 
 <script>
 import CookieLaw from 'vue-cookie-law'
+import { BIcon } from 'bootstrap-vue'
 export default {
   name: 'FooterBar',
-  components: { CookieLaw },
+  components: { CookieLaw, BIcon },
   data () {
     return {
       currentUrl: '',
