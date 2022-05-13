@@ -141,20 +141,12 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '@/assets/scss/custom-vars.scss';
 
 $poster-width: 297mm;
 $poster-height: 420mm;
 $poster-margin: calc($poster-width * 0.1);
-
-@media print {
-  body {
-    margin: 0;
-    padding: 0;
-    print-color-adjust: exact;
-  }
-}
 
 body {
   width: $poster-width;

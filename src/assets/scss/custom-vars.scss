@@ -9,3 +9,11 @@ $enable-responsive-font-sizes: true;
 // Import Bootstrap and BootstrapVue source SCSS files
 @import 'bootstrap/scss/bootstrap.scss';
 @import 'bootstrap-vue/src/index.scss';
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+    print-color-adjust: exact;
+  }
+}
