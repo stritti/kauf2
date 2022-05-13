@@ -25,9 +25,7 @@ export default {
   filter:blur(3px);
 
   /* Set a specific height */
-  min-height: 400px;
-  left:0;
-  width: 100vw;
+  min-height: 380px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -39,6 +37,11 @@ export default {
 @media only screen and (max-device-width: 1366px) {
   .parallax {
     background-attachment: scroll;
+  }
+}
+@media only print {
+  .parallax {
+    display: none;
   }
 }
 </style>
