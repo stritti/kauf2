@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <b-jumbotron>
+    <b-jumbotron class="mb-0">
       <b-container>
         <b-row>
           <b-col md="6">
@@ -23,6 +23,8 @@
         </b-row>
       </b-container>
     </b-jumbotron>
+
+    <parallax-image src="/img/karton-produkte.jpg" />
 
     <b-container>
       <section class="my-5">
@@ -118,7 +120,11 @@
           </b-col>
         </b-row>
       </section>
+    </b-container>
 
+    <parallax-image src="/img/sammelaktion-nak-stockach.jpg" />
+
+    <b-container>
       <section class="my-5">
         <h3 class="my-5">Unterstützende Teams</h3>
 
@@ -126,7 +132,7 @@
 
         <p class="my-3">
           <router-link to="/supporter">
-            <strong>Weitere Teams &hellip;</strong>
+            <h4>Weitere Teams &hellip;</h4>
           </router-link>
         </p>
       </section>
@@ -136,10 +142,14 @@
 
 <script>
 import SupporterList from '@/components/supporter/SupporterList.vue'
+import ParallaxImage from '../components/ParallaxImage.vue'
 
 export default {
   name: 'Home',
-  components: { SupporterList },
+  components: {
+    SupporterList,
+    ParallaxImage
+  },
   metaInfo: {
     title: 'Aktion kauf2'
   },
