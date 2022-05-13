@@ -1,8 +1,7 @@
 <template>
   <b-container
-    id="poster"
-    fluid
     class="poster"
+    fluid
   >
     <b-row
       class="poster__logo yellow-bg"
@@ -18,7 +17,7 @@
         </div>
       </b-col>
     </b-row>
-    <b-row class="poster__content yellow-bg">
+    <b-row class="poster__content yellow-bg py-5">
       <b-col>
         <div class="poster__slogan">
           Du kaufst ein Produkt?
@@ -40,7 +39,7 @@
         </div>
       </b-col>
     </b-row>
-    <b-row class="poster__content yellow-bg pb-3">
+    <b-row class="poster__content yellow-bg py-5">
       <b-col cols="8">
         <p>
           Wir sammeln haltbare Lebensmittel (Konserven, Einmach-Gläser,
@@ -59,58 +58,62 @@
         />
       </b-col>
     </b-row>
-    <b-row class="poster__footer mt-5">
-      <b-col>
-        <div class="poster__supporter-headline">Diese Aktion wird unterstützt von:</div>
-      </b-col>
-    </b-row>
-    <b-row class="poster__footer mt-3">
-      <b-col cols="4">
-        <b-img
-          class="poster__qr-code"
-          src="/print/qrcode_plakat.png"
-          fluid
-        />
-      </b-col>
-      <b-col align-self="start">
-        <b-row>
-          <b-col cols="4">
-            <b-img
-              class="poster__supporter-logo"
-              :src="supporter.Logo[0].thumbnails.large.url"
-              fluid
-            />
-          </b-col>
-          <b-col>
-            <h3 class="supporter-card__name">
-              {{ supporter.Name }}
-            </h3>
-            <div v-if="supporter.Street">
-              {{ supporter.Street }}
-            </div>
-            <div v-if="supporter.Zip || supporter.City">
-              <span v-if="supporter.Zip">{{ supporter.Zip }}&nbsp;</span>
-              <span v-if="supporter.City">{{ supporter.City }}</span>
-            </div>
-            <div v-if="supporter.Website">
-              <a
-                :href="supporter.Website"
-                target="_blank"
-                rel="noopener noreferrer"
-              >{{ supporter.Website }}</a>
-            </div>
-          </b-col>
-        </b-row>
-      </b-col>
-    </b-row>
+    <div class="poster__footer">
+      <b-row class="mt-5">
+        <b-col>
+          <div class="poster__supporter-headline">Diese Aktion wird unterstützt von:</div>
+        </b-col>
+      </b-row>
+      <b-row class="mt-3">
+        <b-col cols="4">
+          <VueQRCodeComponent
+            :size="120"
+            :text="`https://www.aktion-kauf2.de/?utm_source=QRCode&utm_medium=Plakat&utm_campaign=Plakat&utm_content=${supporter.Name}`" />
+        </b-col>
+        <b-col align-self="start">
+          <b-row>
+            <b-col cols="4">
+              <b-img
+                class="poster__supporter-logo"
+                :src="supporter.Logo[0].thumbnails.large.url"
+                fluid
+              />
+            </b-col>
+            <b-col>
+              <h3 class="supporter-card__name">
+                {{ supporter.Name }}
+              </h3>
+              <div v-if="supporter.Street">
+                {{ supporter.Street }}
+              </div>
+              <div v-if="supporter.Zip || supporter.City">
+                <span v-if="supporter.Zip">{{ supporter.Zip }}&nbsp;</span>
+                <span v-if="supporter.City">{{ supporter.City }}</span>
+              </div>
+              <div v-if="supporter.Website">
+                <a
+                  :href="supporter.Website"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >{{ supporter.Website }}</a>
+              </div>
+            </b-col>
+          </b-row>
+        </b-col>
+      </b-row>
+    </div>
   </b-container>
 </template>
 
 <script>
 import supporterService from '@/services/supporter.service'
+import VueQRCodeComponent from 'vue-qrcode-component'
 
 export default {
   name: 'SupporterPosterView',
+  components: {
+    VueQRCodeComponent
+  },
   props: {
     supporterId: {
       type: String,
@@ -141,6 +144,10 @@ export default {
 <style lang="scss">
 @import '@/assets/scss/custom-vars.scss';
 
+$poster-width: 297mm;
+$poster-height: 420mm;
+$poster-margin: calc($poster-width * 0.1);
+
 @media print {
   body {
     margin: 0;
@@ -149,16 +156,19 @@ export default {
   }
 }
 
-#app {
-  .navbar, .footer {
-    display: none;
-  }
+body {
+  width: $poster-width;
+  min-width: 210mm;
+  height: $poster-height;
+  min-height:$poster-width;
+  margin-left: auto;
+  margin-right: auto;
 }
-
 .poster {
-  width: 100%;
-  height: calc(100vw * 1.414);
-  max-height: calc(100vw * 1.414);
+  width: $poster-width;
+  min-width: 210mm;
+  height: $poster-height;
+  min-height: $poster-width;
 
   .yellow-bg {
     background-color: $yellow;
@@ -166,26 +176,26 @@ export default {
 
   &__logo {
     .logo {
-      width: 80%;
-      margin: calc(100vw * 0.05);
+      width: 86%;
+      margin-top: calc($poster-margin/2);
+      margin-left: $poster-margin;
       margin-bottom: 0;
     }
   }
   &__url {
-    font-size: calc(100vw * 0.04);
+    font-size: 46px;
     font-weight: 600;
     color: $red;
-    margin-left: calc(100vw * 0.05 + 15px);
-    margin-top: - calc(100vw * 0.05);
+    margin-left: $poster-margin;
+    margin-top: - 1.75cm;
   }
 &__content {
     padding-top: 0;
-    padding: calc(100vw * 0.05);
-    padding-right: calc(100vw * 0.025);
-    padding-bottom: calc(100vw * 0.025);
+    padding-left: $poster-margin;
+    padding-right: $poster-margin;
 
     p {
-      font-size: calc(100vw * 0.025);
+      font-size: 28px;
       font-weight: 400;
       text-align: left;
     }
@@ -195,7 +205,7 @@ export default {
     justify-content: center;
     align-items: center;
     font-weight: 600;
-    font-size: calc(100vw * 0.04);
+    font-size: 46px;
 
     .red {
       color: $red;
@@ -205,15 +215,16 @@ export default {
     max-height: 3cm;
   }
   &__supporter-headline {
-    font-size: calc(100vw * 0.025);
+    font-size: 28px;
     font-weight: 600;
   }
   &__supporter-logo {
     max-height: 3cm;
   }
   &__footer {
-    padding-right: calc(100vw * 0.025);
-    padding-left: calc(100vw * 0.025);
+    position: relative;
+    bottom: 0;
+    width: 100%;
   }
 }
 </style>
