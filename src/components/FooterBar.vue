@@ -87,7 +87,7 @@
               </b-col>
               <b-col cols="1">
                 <a
-                  href="https://www.instagram.com/explore/tags/kauf2/"
+                  href="https://www.instagram.com/aktion_kauf2/"
                   rel="noopener"
                   target="_blank"
                   class="nav-link"
