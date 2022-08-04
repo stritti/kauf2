@@ -33,7 +33,7 @@
     "eslint-plugin-standard": "^5.0.0",
     "lint-staged": "^12.4.2",
     "prettier": "^2.2.1",
-    "sass": "^1.52.2",
+    "sass": "^1.54.2",
     "sass-loader": "^13",
     "vue-template-compiler": "^2.6.11"
   },
