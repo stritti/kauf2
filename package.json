@@ -12,7 +12,7 @@
     "bootstrap-vue": "^2.22.0",
     "core-js": "^3.25.5",
     "dotenv": "^16.0.3",
-    "vue": "^2.7.12",
+    "vue": "^2.7.13",
     "vue-cookie-law": "^1.13.3",
     "vue-gtag": "^1.16.1",
     "vue-meta": "^2.4.0",
@@ -35,7 +35,7 @@
     "prettier": "^2.7.1",
     "sass": "^1.55.0",
     "sass-loader": "^13",
-    "vue-template-compiler": "^2.7.12"
+    "vue-template-compiler": "^2.7.13"
   },
   "browserslist": [
     "> 1%",
