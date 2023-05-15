@@ -12,7 +12,7 @@
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.30.1",
     "dotenv": "^16.0.3",
-    "vue": "^2.7.14",
+    "vue": "^3.3.2",
     "vue-cookie-law": "^1.13.3",
     "vue-gtag": "^1.16.1",
     "vue-meta": "^2.4.0",
