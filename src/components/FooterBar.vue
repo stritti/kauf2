@@ -82,7 +82,7 @@
                   target="_blank"
                   class="nav-link"
                 >
-                  <b-icon icon="twitter" />
+                  <b-icon icon="twitter-x" />
                 </a>
               </b-col>
               <b-col cols="1">
