@@ -35,7 +35,7 @@
     "prettier": "^3.2.5",
     "sass": "^1.72.0",
     "sass-loader": "^14",
-    "vue-template-compiler": "^2.7.14"
+    "vue-template-compiler": "^2.7.16"
   },
   "browserslist": [
     "> 1%",
