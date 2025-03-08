@@ -14,7 +14,7 @@
     "dotenv": "^16.4.7",
     "vue": "^2.7.16",
     "vue-cookie-law": "^1.13.3",
-    "vue-gtag": "^1.16.1",
+    "vue-gtag": "^2.1.0",
     "vue-meta": "^2.4.0",
     "vue-qrcode-component": "^2.1.1",
     "vue-router": "^3.6.5"
