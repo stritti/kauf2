@@ -11,7 +11,7 @@
     "axios": "^1.10.0",
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.44.0",
-    "dotenv": "^17.2.0",
+    "dotenv": "^17.2.2",
     "vue": "^2.7.16",
     "vue-cookie-law": "^1.13.3",
     "vue-gtag": "^1.16.1",
