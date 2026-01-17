@@ -39,9 +39,13 @@
 </template>
 
 <script>
+import { useHead } from '@unhead/vue'
+
 export default {
-  metaInfo: {
-    title: 'Presse'
+  setup() {
+    useHead({
+      title: 'Presse'
+    })
   }
 }
 </script>

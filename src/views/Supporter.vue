@@ -21,13 +21,16 @@
 </template>
 
 <script>
+import { useHead } from '@unhead/vue'
 import SupporterList from '@/components/supporter/SupporterList.vue'
 
 export default {
   name: 'Supporter',
   components: { SupporterList },
-  metaInfo: {
-    title: 'Unterstützer der Aktion kauf2'
+  setup() {
+    useHead({
+      title: 'Unterstützer der Aktion kauf2'
+    })
   }
 }
 </script>

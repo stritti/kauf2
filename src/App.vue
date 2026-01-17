@@ -9,15 +9,17 @@
 </template>
 
 <script>
+import { useHead } from '@unhead/vue'
 import NavBar from '@/components/NavBar.vue'
 import FooterBar from '@/components/FooterBar.vue'
+
 export default {
   components: { NavBar, FooterBar },
-  metaInfo: {
-    // if no subcomponents specify a metaInfo.title, this title will be used
-    title: 'Kauf2',
-    // all titles will be injected into this template
-    titleTemplate: '%s | Aktion Kauf2'
+  setup() {
+    useHead({
+      title: 'Kauf2',
+      titleTemplate: '%s | Aktion Kauf2'
+    })
   }
 }
 </script>

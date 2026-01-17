@@ -44,25 +44,31 @@
   </b-container>
 </template>
 <script>
+import { useHead } from '@unhead/vue'
+import { ref, onMounted } from 'vue'
 import ProductList from '@/components/product/ProductList.vue'
 import productCategoryService from '@/services/productCategory.service'
 
 export default {
   name: 'Products',
   components: { ProductList },
-  data () {
+  setup() {
+    useHead({
+      title: 'Übersicht von Produkten'
+    })
+
+    const productCategoryList = ref([])
+
+    onMounted(() => {
+      productCategoryService.getList()
+        .then(result => {
+          productCategoryList.value = result
+        })
+    })
+
     return {
-      productCategoryList: []
+      productCategoryList
     }
-  },
-  metaInfo: {
-    title: 'Übersicht von Produkten'
-  },
-  mounted () {
-    productCategoryService.getList()
-      .then(result => {
-        this.productCategoryList = result
-      })
   }
 }
 </script>

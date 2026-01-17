@@ -141,6 +141,7 @@
 </template>
 
 <script>
+import { useHead } from '@unhead/vue'
 import SupporterList from '@/components/supporter/SupporterList.vue'
 import ParallaxImage from '../components/ParallaxImage.vue'
 
@@ -150,10 +151,11 @@ export default {
     SupporterList,
     ParallaxImage
   },
-  metaInfo: {
-    title: 'Aktion kauf2'
-  },
-  data () {
+  setup() {
+    useHead({
+      title: 'Aktion kauf2'
+    })
+
     return {
       numberSupporter: 3
     }

@@ -62,10 +62,14 @@
 </template>
 
 <script>
+import { useHead } from '@unhead/vue'
+
 export default {
   name: 'Imprint',
-  metaInfo: {
-    title: 'Impressum'
+  setup() {
+    useHead({
+      title: 'Impressum'
+    })
   }
 }
 </script>

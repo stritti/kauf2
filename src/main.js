@@ -1,18 +1,22 @@
-import './plugins/bootstrap-vue'
-import Vue from 'vue'
+import { createApp } from 'vue'
+import { createHead } from '@unhead/vue'
+import VueGtag from 'vue-gtag-next'
 import App from './App.vue'
-import VueMeta from 'vue-meta'
-import VueGtag from 'vue-gtag'
 import router from './router'
 
-Vue.config.productionTip = false
+// Import Bootstrap and BootstrapVueNext
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue-next/dist/bootstrap-vue-next.css'
+import { createBootstrap } from 'bootstrap-vue-next'
 
-Vue.use(VueMeta)
-Vue.use(VueGtag, {
-  config: { id: 'G-YTE0YGYNEG' }
-}, router)
+const app = createApp(App)
+const head = createHead()
 
-new Vue({
-  router,
-  render: h => h(App)
-}).$mount('#app')
+app.use(head)
+app.use(router)
+app.use(createBootstrap())
+app.use(VueGtag, {
+  property: { id: 'G-YTE0YGYNEG' }
+})
+
+app.mount('#app')

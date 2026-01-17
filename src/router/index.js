@@ -1,8 +1,5 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-
-Vue.use(VueRouter)
 
 const routes = [
   {
@@ -50,17 +47,15 @@ const routes = [
 
 ]
 
-const scrollBehavior = function (to, from, savedPosition) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve({ x: 0, y: 0 })
-    }, 500)
-  })
-}
-
-const router = new VueRouter({
-  mode: 'history',
-  scrollBehavior,
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  scrollBehavior(to, from, savedPosition) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve({ left: 0, top: 0 })
+      }, 500)
+    })
+  },
   routes
 })
 

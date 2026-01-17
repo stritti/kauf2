@@ -6,13 +6,15 @@
 </template>
 
 <script>
-
+import { useHead } from '@unhead/vue'
 import ContactForm from '@/components/contact/ContactForm.vue'
 
 export default {
   components: { ContactForm },
-  metaInfo: {
-    title: 'Kontakt'
+  setup() {
+    useHead({
+      title: 'Kontakt'
+    })
   }
 }
 </script>

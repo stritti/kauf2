@@ -215,10 +215,14 @@
 </template>
 
 <script>
+import { useHead } from '@unhead/vue'
+
 export default {
   name: 'Privacy',
-  metaInfo: {
-    title: 'Datenschutz'
+  setup() {
+    useHead({
+      title: 'Datenschutz'
+    })
   }
 }
 </script>
