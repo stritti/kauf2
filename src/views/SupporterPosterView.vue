@@ -68,9 +68,9 @@
       </b-row>
       <b-row class="mt-3">
         <b-col cols="4">
-          <VueQRCodeComponent
+          <QrcodeVue
             :size="120"
-            :text="`https://www.aktion-kauf2.de/?utm_source=QRCode&utm_medium=Plakat&utm_campaign=Plakat&utm_content=${supporter.Name}`"
+            :value="`https://www.aktion-kauf2.de/?utm_source=QRCode&utm_medium=Plakat&utm_campaign=Plakat&utm_content=${supporter.Name}`"
           />
         </b-col>
         <b-col align-self="start">
@@ -110,12 +110,12 @@
 
 <script>
 import supporterService from '@/services/supporter.service'
-import VueQRCodeComponent from 'vue-qrcode-component'
+import QrcodeVue from 'qrcode.vue'
 
 export default {
   name: 'SupporterPosterView',
   components: {
-    VueQRCodeComponent
+    QrcodeVue
   },
   props: {
     supporterId: {
