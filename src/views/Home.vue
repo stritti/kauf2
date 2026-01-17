@@ -79,12 +79,16 @@
               </li>
               <li>
                 Registriere dich, damit wir dein Team mit bei den
-                <router-link to="/supporter">Unterstützern</router-link>
+                <router-link to="/supporter">
+                  Unterstützern
+                </router-link>
                 veröffentlichen.
               </li>
               <li>
                 Richte eine Sammelstelle für die Lebensmittel
-                ein damit du mit dein Team <router-link to="/produkte">die Produkte</router-link> sammeln kannst.
+                ein damit du mit dein Team <router-link to="/produkte">
+                  die Produkte
+                </router-link> sammeln kannst.
               </li>
               <li>
                 Wenn eine Ration zusammen gekommen ist, nimm mit
@@ -126,7 +130,9 @@
 
     <b-container>
       <section class="my-5">
-        <h3 class="my-5">Unterstützende Teams</h3>
+        <h3 class="my-5">
+          Unterstützende Teams
+        </h3>
 
         <supporter-list :random-number="numberSupporter" />
 

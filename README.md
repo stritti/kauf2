@@ -8,7 +8,7 @@ https://kauf2.vercel.app/
 
 ## Development
 
-Project is based on vue.js, Airtable and boostrap-vue.
+Project is based on Vue 3, Vite, Airtable and Bootstrap-Vue-Next.
 
 ### Project setup
 
@@ -17,6 +17,12 @@ npm install
 ```
 
 ### Compiles and hot-reloads for development
+
+```sh
+npm run dev
+```
+
+or
 
 ```sh
 npm run serve
@@ -28,6 +34,12 @@ npm run serve
 npm run build
 ```
 
+### Preview production build
+
+```sh
+npm run preview
+```
+
 ### Lints and fixes files
 
 ```sh
@@ -36,4 +48,4 @@ npm run lint
 
 ### Customize configuration
 
-See [Configuration Reference](https://cli.vuejs.org/config/).
+See [Vite Configuration Reference](https://vite.dev/config/).
