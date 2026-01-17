@@ -103,34 +103,44 @@
     <b-container class="footer-bar d-none d-print-block">
       &copy; 2015 - {{ year }} Aktion kauf2: {{ currentUrl }}
     </b-container>
-    <cookie-law
-      theme="blood-orange"
-      button-text="OK"
+    <vue-cookie-accept-decline
+      :ref="'cookie-banner'"
+      :element-id="'cookie-banner'"
+      :debug="false"
+      :position="'bottom'"
+      :type="'bar'"
+      :disable-decline="true"
+      :transition-name="'slideFromBottom'"
+      :show-postpone-button="false"
       class="d-print-none"
     >
-      <div slot="message">
+      <template #message>
         Wir verwenden Cookies, um unsere Website zu verbessern.
         Informationen zum <router-link to="/privacy">
           Datenschutz
         </router-link>.
-      </div>
-    </cookie-law>
+      </template>
+      <template #acceptContent>
+        OK
+      </template>
+    </vue-cookie-accept-decline>
   </footer>
 </template>
 
 <script>
-import CookieLaw from 'vue-cookie-law'
-import { BIcon } from 'bootstrap-vue'
+import VueCookieAcceptDecline from 'vue-cookie-accept-decline'
+import 'vue-cookie-accept-decline/dist/vue-cookie-accept-decline.css'
+
 export default {
   name: 'FooterBar',
-  components: { CookieLaw, BIcon },
-  data () {
+  components: { VueCookieAcceptDecline },
+  data() {
     return {
       currentUrl: '',
       year: null
     }
   },
-  created () {
+  created() {
     this.currentUrl = window.location.href
     this.year = new Date().getFullYear()
   }
