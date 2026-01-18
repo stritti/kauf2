@@ -1,9 +1,9 @@
 import axios from 'axios'
 
 const airtableBase = axios.create({
-  baseURL: `https://api.airtable.com/v0/${process.env.VUE_APP_AIRTABLE_BASE}/`,
+  baseURL: `https://api.airtable.com/v0/${import.meta.env.VITE_AIRTABLE_BASE}/`,
   headers: {
-    Authorization: 'Bearer ' + process.env.VUE_APP_AIRTABLE_API_KEY,
+    Authorization: 'Bearer ' + import.meta.env.VITE_AIRTABLE_API_KEY,
     'Content-Type': 'application/json'
   }
 })
