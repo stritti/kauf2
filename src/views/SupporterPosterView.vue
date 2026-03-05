@@ -70,7 +70,7 @@
         <b-col cols="4">
           <QrcodeVue
             :size="120"
-            :value="`https://www.aktion-kauf2.de/?utm_source=QRCode&utm_medium=Plakat&utm_campaign=Plakat&utm_content=${supporter.Name}`"
+            :value="`https://www.aktion-kauf2.de/?utm_source=QRCode&utm_medium=Plakat&utm_campaign=Plakat&utm_content=${encodeURIComponent(supporter.Name)}`"
           />
         </b-col>
         <b-col align-self="start">
