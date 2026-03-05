@@ -40,6 +40,7 @@
         <a
           :href="`/supporter/${supporter.id}/poster`"
           target="_blank"
+          rel="noopener noreferrer"
         >Poster drucken ...</a>
       </div>
     </b-card-text>
