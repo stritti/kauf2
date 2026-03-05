@@ -64,6 +64,10 @@ export default {
         .then(result => {
           productCategoryList.value = result
         })
+        .catch(error => {
+          console.error('Fehler beim Laden der Produktkategorien:', error)
+          productCategoryList.value = []
+        })
     })
 
     return {

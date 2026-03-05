@@ -16,19 +16,30 @@ Project is based on Vue 3, Vite, Airtable and Bootstrap-Vue-Next.
 npm install
 ```
 
-### Environment Variables
+### ⚠️ Environment Variables (Required)
 
-Copy `.env.example` to `.env.local` and configure your Airtable credentials:
+**Important:** The application requires Airtable credentials to load data.
 
-```sh
-cp .env.example .env.local
-```
+1. Copy `.env.example` to `.env.local`:
+   ```sh
+   cp .env.example .env.local
+   ```
 
-Required environment variables:
-- `VITE_AIRTABLE_API_KEY` - Your Airtable API key
-- `VITE_AIRTABLE_BASE` - Your Airtable base ID
+2. Edit `.env.local` and add your Airtable credentials:
+   ```env
+   VITE_AIRTABLE_API_KEY=your_actual_api_key_here
+   VITE_AIRTABLE_BASE=your_actual_base_id_here
+   ```
 
-**Note:** After migrating from Vue CLI to Vite, environment variables changed from `VUE_APP_*` to `VITE_*` prefix.
+3. Get your credentials from:
+   - API Key: https://airtable.com/account
+   - Base ID: From your Airtable base URL
+
+**Note for existing developers:** After migrating from Vue CLI to Vite, environment variables changed:
+- `VUE_APP_AIRTABLE_API_KEY` → `VITE_AIRTABLE_API_KEY`
+- `VUE_APP_AIRTABLE_BASE` → `VITE_AIRTABLE_BASE`
+
+Without these credentials, the supporter and product lists will not load.
 
 ### Compiles and hot-reloads for development
 

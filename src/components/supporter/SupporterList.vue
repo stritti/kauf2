@@ -65,6 +65,11 @@ export default {
           this.supporterList = result
         }
       })
+      .catch(error => {
+        console.error('Fehler beim Laden der Unterstützer-Daten:', error)
+        // Set empty array to stop loading spinner
+        this.supporterList = []
+      })
   },
   methods: {
     getRandom (arr, n) {

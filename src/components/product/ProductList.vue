@@ -40,6 +40,11 @@ export default {
       .then(result => {
         this.productList = result
       })
+      .catch(error => {
+        console.error('Fehler beim Laden der Produkt-Daten:', error)
+        // Set empty array to stop loading spinner
+        this.productList = []
+      })
   }
 }
 </script>
