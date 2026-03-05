@@ -42,40 +42,36 @@ const head = createHead()
 
 app.use(head)
 app.use(router)
-app.use(createBootstrap())
-
-// Register only the components we actually use
-const components = {
-  BAlert,
-  BButton,
-  BCard,
-  BCardBody,
-  BCardFooter,
-  BCardGroup,
-  BCardHeader,
-  BCardImg,
-  BCardText,
-  BCol,
-  BCollapse,
-  BContainer,
-  BForm,
-  BFormGroup,
-  BFormInput,
-  BFormTextarea,
-  BImg,
-  BNavItem,
-  BNavbar,
-  BNavbarBrand,
-  BNavbarNav,
-  BNavbarToggle,
-  BRow,
-  BSpinner
-}
-
-Object.entries(components).forEach(([name, component]) => {
-  app.component(name, component)
-})
-
+app.use(
+  createBootstrap({
+    components: {
+      BAlert,
+      BButton,
+      BCard,
+      BCardBody,
+      BCardFooter,
+      BCardGroup,
+      BCardHeader,
+      BCardImg,
+      BCardText,
+      BCol,
+      BCollapse,
+      BContainer,
+      BForm,
+      BFormGroup,
+      BFormInput,
+      BFormTextarea,
+      BImg,
+      BNavItem,
+      BNavbar,
+      BNavbarBrand,
+      BNavbarNav,
+      BNavbarToggle,
+      BRow,
+      BSpinner
+    }
+  })
+)
 app.use(VueGtag, {
   property: { id: 'G-YTE0YGYNEG' }
 })
