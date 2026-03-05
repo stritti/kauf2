@@ -74,6 +74,6 @@ app.use(
 )
 app.use(VueGtag, {
   property: { id: 'G-YTE0YGYNEG' }
-})
+}, router)
 
 app.mount('#app')
