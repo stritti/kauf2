@@ -3,8 +3,9 @@
     class="supporter-card"
   >
     <template #header>
-      <b-card-img-lazy
+      <b-card-img
         v-if="supporter.Logo?.[0]?.thumbnails?.large?.url"
+        lazy
         :src="supporter.Logo[0].thumbnails.large.url"
         class="supporter-card__logo"
         @click="clickURL"
