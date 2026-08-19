@@ -10,7 +10,8 @@
             >
               <b-img
                 class="footer__logo"
-                src="/img/kauf_2.svg" />
+                src="/img/kauf_2.svg"
+              />
               &copy; 2015 - {{ year }} Aktion kauf2
             </router-link>
           </b-col>

@@ -5,14 +5,20 @@
       Vielen Dank für Ihr Interesse an unserem Projekt. Wir werden versuchen hier
       Pressematerial und -informationen bereit zu stellen.
     </p>
-    <h2 class="mt-5">Kontakt</h2>
+    <h2 class="mt-5">
+      Kontakt
+    </h2>
     <p>
       Damit wir uns mit Ihnen in Kontakt setzen können, können Sie uns gerne
       über das
-      <router-link to="/kontakt">Kontaktformular</router-link>
+      <router-link to="/kontakt">
+        Kontaktformular
+      </router-link>
       erreichen.
     </p>
-    <h2 class="mt-5">Pressematerial</h2>
+    <h2 class="mt-5">
+      Pressematerial
+    </h2>
     <b-card-group columns>
       <b-card
         title="kauf2 Logo"

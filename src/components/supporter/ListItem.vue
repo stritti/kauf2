@@ -24,7 +24,7 @@
         {{ supporter.Street }}
       </div>
       <div v-if="supporter.Zip || supporter.City">
-        <span v-if="supporter.Zip">{{supporter.Zip}}&nbsp;</span>
+        <span v-if="supporter.Zip">{{ supporter.Zip }}&nbsp;</span>
         <span v-if="supporter.City">{{ supporter.City }}</span>
       </div>
       <div v-if="supporter.Website">
@@ -37,7 +37,10 @@
     </b-card-text>
     <b-card-text>
       <div>
-        <a :href="`/supporter/${supporter.id}/poster`" target="_blank">Poster drucken ...</a>
+        <a
+          :href="`/supporter/${supporter.id}/poster`"
+          target="_blank"
+        >Poster drucken ...</a>
       </div>
     </b-card-text>
   </b-card>
