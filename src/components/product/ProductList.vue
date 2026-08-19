@@ -1,14 +1,15 @@
 <template>
   <div>
-    <b-card-text
+    <ul
       v-if="productList"
+      class="product-list"
     >
       <list-item
         v-for="product in productList"
         :key="product.id"
         :product="product"
       />
-    </b-card-text>
+    </ul>
     <div
       v-else
       class="d-flex align-items-center loading"
@@ -34,6 +35,10 @@ const { list: productList } = useAirtableList<WithId<Product>>(
 
 <style lang="scss">
 @import '@/assets/scss/custom-vars.scss';
+.product-list {
+  margin-bottom: 0;
+  padding-left: 1.5rem;
+}
 .loading {
   min-height: 200px;
   .spinner-border {
