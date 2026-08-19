@@ -1,6 +1,9 @@
 <template>
-  <footer class="footer d-print-none">
-    <b-container class="navbar-dark d-print-none pb-5">
+  <footer
+    class="footer d-print-none"
+    data-bs-theme="dark"
+  >
+    <b-container class="d-print-none pb-5">
       <nav class="navbar-nav">
         <b-row>
           <b-col>

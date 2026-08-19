@@ -1,8 +1,8 @@
 <template>
   <b-navbar
-    type="dark"
     variant="dark"
     toggleable="md"
+    data-bs-theme="dark"
   >
     <b-container class="d-flex">
       <b-navbar-brand to="/">
@@ -49,13 +49,13 @@
   }
 
   // Fix navbar toggler icon visibility on dark navbar
-  .navbar-dark .navbar-toggler-icon {
+  .navbar .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
     width: 1.5em;
     height: 1.5em;
   }
 
-  .navbar-dark .navbar-toggler {
+  .navbar .navbar-toggler {
     border-color: rgba(255, 255, 255, 0.5);
     border-width: 2px;
     padding: 0.5rem 0.75rem;

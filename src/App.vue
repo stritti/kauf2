@@ -39,4 +39,21 @@ body {
     flex-shrink: 0;
   }
 }
+
+// Restore Bootstrap 4 masonry card layout (removed in Bootstrap 5).
+// bootstrap-vue-next's <b-card-group columns> renders `.card-columns`.
+.card-columns {
+  column-gap: 1.25rem;
+
+  .card {
+    margin-bottom: 0.75rem;
+    break-inside: avoid;
+  }
+
+  @media (min-width: 992px) {
+    column-count: 3;
+    orphans: 1;
+    widows: 1;
+  }
+}
 </style>
