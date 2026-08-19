@@ -5,14 +5,9 @@
   </b-container>
 </template>
 
-<script>
-
+<script setup lang="ts">
+import { useHead } from '@unhead/vue'
 import ContactForm from '@/components/contact/ContactForm.vue'
 
-export default {
-  components: { ContactForm },
-  metaInfo: {
-    title: 'Kontakt'
-  }
-}
+useHead({ title: 'Kontakt' })
 </script>

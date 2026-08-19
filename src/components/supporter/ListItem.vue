@@ -3,8 +3,9 @@
     class="supporter-card"
   >
     <template #header>
-      <b-card-img-lazy
-        v-if="supporter.Logo"
+      <b-card-img
+        v-if="supporter.Logo?.[0]?.thumbnails?.large?.url"
+        lazy
         :src="supporter.Logo[0].thumbnails.large.url"
         class="supporter-card__logo"
         @click="clickURL"
@@ -40,27 +41,22 @@
         <a
           :href="`/supporter/${supporter.id}/poster`"
           target="_blank"
+          rel="noopener noreferrer"
         >Poster drucken ...</a>
       </div>
     </b-card-text>
   </b-card>
 </template>
 
-<script>
-export default {
-  name: 'ListItem',
-  props: {
-    supporter: {
-      type: Object,
-      required: true
-    }
-  },
-  methods: {
-    clickURL () {
-      if (this.supporter.Website) {
-        window.location.href = this.supporter.Website
-      }
-    }
+<script setup lang="ts">
+import type { Supporter, WithId } from '@/types/models'
+
+const props = defineProps<{ supporter: WithId<Supporter> }>()
+
+function clickURL() {
+  const website = props.supporter.Website
+  if (website) {
+    window.location.href = website
   }
 }
 </script>

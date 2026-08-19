@@ -118,42 +118,46 @@
       Ihre Anmeldung wird nach einem Review freigeschaltet
       und wir informieren sie dann per Email.
     </b-alert>
+    <b-alert
+      v-if="errorSubmit"
+      variant="danger"
+      class="my-5"
+      show
+    >
+      Bei der Anmeldung ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.
+    </b-alert>
   </div>
 </template>
 
-<script>
-import supporterService from '@/services/supporter.service'
-export default {
-  name: 'CreateForm',
-  data () {
-    return {
-      supporter: {},
-      showForm: true,
-      success: false,
-      errorSubmit: null
-    }
-  },
-  methods: {
-    onSubmit (event) {
-      event.preventDefault()
-      this.showForm = false
-      const data = {
-        Status: 'requested',
-        ...this.supporter
-      }
-      supporterService.save(data)
-        .then(() => {
-          this.success = true
-        })
-        .catch((ex) => {
-          this.errorSubmit = ex
-          this.showForm = true
-        })
-    }
+<script setup lang="ts">
+import { reactive, ref } from 'vue'
+import { supporterService } from '@/services/supporter.service'
+import type { Supporter } from '@/types/models'
+
+const supporter = reactive<Supporter>({
+  Name: '',
+  Street: '',
+  Zip: '',
+  City: '',
+  Website: '',
+  'Contact Name': '',
+  Email: ''
+})
+const showForm = ref(true)
+const success = ref(false)
+const errorSubmit = ref<string | null>(null)
+
+async function onSubmit(event: Event) {
+  event.preventDefault()
+  showForm.value = false
+  try {
+    await supporterService.save({ Status: 'requested', ...supporter })
+    success.value = true
+  } catch (error) {
+    errorSubmit.value = error instanceof Error ? error.message : String(error)
+    showForm.value = true
   }
 }
 </script>
 
-<style>
 
-</style>

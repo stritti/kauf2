@@ -6,9 +6,8 @@ $primary: $red;
 
 $enable-responsive-font-sizes: true;
 
-// Import Bootstrap and BootstrapVue source SCSS files
+// Import Bootstrap source SCSS files (using @import for compatibility)
 @import 'bootstrap/scss/bootstrap.scss';
-@import 'bootstrap-vue/src/index.scss';
 
 @media print {
   body {

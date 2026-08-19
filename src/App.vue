@@ -8,18 +8,15 @@
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
+import { useHead } from '@unhead/vue'
 import NavBar from '@/components/NavBar.vue'
 import FooterBar from '@/components/FooterBar.vue'
-export default {
-  components: { NavBar, FooterBar },
-  metaInfo: {
-    // if no subcomponents specify a metaInfo.title, this title will be used
-    title: 'Kauf2',
-    // all titles will be injected into this template
-    titleTemplate: '%s | Aktion Kauf2'
-  }
-}
+
+useHead({
+  title: 'Kauf2',
+  titleTemplate: '%s | Aktion Kauf2'
+})
 </script>
 
 <style lang="scss">
@@ -40,6 +37,23 @@ body {
   }
   .navbar, .content, footer {
     flex-shrink: 0;
+  }
+}
+
+// Restore Bootstrap 4 masonry card layout (removed in Bootstrap 5).
+// bootstrap-vue-next's <b-card-group columns> renders `.card-columns`.
+.card-columns {
+  column-gap: 1.25rem;
+
+  .card {
+    margin-bottom: 0.75rem;
+    break-inside: avoid;
+  }
+
+  @media (min-width: 992px) {
+    column-count: 3;
+    orphans: 1;
+    widows: 1;
   }
 }
 </style>

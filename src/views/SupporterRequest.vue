@@ -8,18 +8,11 @@
   </b-container>
 </template>
 
-<script>
+<script setup lang="ts">
+import { useHead } from '@unhead/vue'
 import CreateForm from '@/components/supporter/CreateForm.vue'
 
-export default {
-
-  components: { CreateForm },
-  metaInfo: {
-    title: 'Anfrage Unterstützer-Teams'
-  }
-}
+useHead({ title: 'Anfrage Unterstützer-Teams' })
 </script>
 
-<style>
 
-</style>

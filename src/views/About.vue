@@ -29,10 +29,8 @@
   </b-container>
 </template>
 
-<script>
-export default {
-  metaInfo: {
-    title: 'Über Kauf2'
-  }
-}
+<script setup lang="ts">
+import { useHead } from '@unhead/vue'
+
+useHead({ title: 'Über Kauf2' })
 </script>

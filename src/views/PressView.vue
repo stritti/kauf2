@@ -44,10 +44,8 @@
   </b-container>
 </template>
 
-<script>
-export default {
-  metaInfo: {
-    title: 'Presse'
-  }
-}
+<script setup lang="ts">
+import { useHead } from '@unhead/vue'
+
+useHead({ title: 'Presse' })
 </script>

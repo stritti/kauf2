@@ -61,13 +61,10 @@
   </b-container>
 </template>
 
-<script>
-export default {
-  name: 'Imprint',
-  metaInfo: {
-    title: 'Impressum'
-  }
-}
+<script setup lang="ts">
+import { useHead } from '@unhead/vue'
+
+useHead({ title: 'Impressum' })
 </script>
 
 <style lang="scss">

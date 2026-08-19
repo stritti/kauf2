@@ -1,14 +1,15 @@
 <template>
   <div>
-    <b-card-text
+    <ul
       v-if="productList"
+      class="product-list"
     >
       <list-item
         v-for="product in productList"
         :key="product.id"
         :product="product"
       />
-    </b-card-text>
+    </ul>
     <div
       v-else
       class="d-flex align-items-center loading"
@@ -18,34 +19,26 @@
   </div>
 </template>
 
-<script>
-import productService from '@/services/product.service'
+<script setup lang="ts">
+import { useAirtableList } from '@/composables/useAirtableList'
+import { productService } from '@/services/product.service'
 import ListItem from './ListItem.vue'
-export default {
-  name: 'List',
-  components: { ListItem },
-  props: {
-    categoryId: {
-      type: Number,
-      required: true
-    }
-  },
-  data () {
-    return {
-      productList: null
-    }
-  },
-  mounted () {
-    productService.getList(this.categoryId)
-      .then(result => {
-        this.productList = result
-      })
-  }
-}
+import type { Product, WithId } from '@/types/models'
+
+const props = defineProps<{ categoryId: number }>()
+
+const { list: productList } = useAirtableList<WithId<Product>>(
+  () => productService.getList(props.categoryId),
+  'Fehler beim Laden der Produkt-Daten'
+)
 </script>
 
 <style lang="scss">
 @import '@/assets/scss/custom-vars.scss';
+.product-list {
+  margin-bottom: 0;
+  padding-left: 1.5rem;
+}
 .loading {
   min-height: 200px;
   .spinner-border {

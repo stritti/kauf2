@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <b-jumbotron class="mb-0">
+    <div class="jumbotron mb-0">
       <b-container>
         <b-row>
           <b-col md="6">
@@ -22,7 +22,7 @@
           </b-col>
         </b-row>
       </b-container>
-    </b-jumbotron>
+    </div>
 
     <parallax-image src="/img/karton-produkte.jpg" />
 
@@ -146,31 +146,28 @@
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
+import { useHead } from '@unhead/vue'
 import SupporterList from '@/components/supporter/SupporterList.vue'
-import ParallaxImage from '../components/ParallaxImage.vue'
+import ParallaxImage from '@/components/ParallaxImage.vue'
 
-export default {
-  name: 'Home',
-  components: {
-    SupporterList,
-    ParallaxImage
-  },
-  metaInfo: {
-    title: 'Aktion kauf2'
-  },
-  data () {
-    return {
-      numberSupporter: 3
-    }
-  }
-}
+useHead({ title: 'Aktion kauf2' })
+
+const numberSupporter = 3
 </script>
 
 <style lang="scss" scoped>
 @import '@/assets/scss/custom-vars.scss';
 .jumbotron {
   background-color: $yellow;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0.3rem;
+  
+  @media (min-width: 576px) {
+    padding: 4rem 2rem;
+  }
+  
   .logo {
     transform: rotate(-5deg);
     padding: 2rem;

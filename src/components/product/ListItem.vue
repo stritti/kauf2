@@ -5,18 +5,10 @@
   />
 </template>
 
-<script>
-export default {
-  name: 'ListItem',
-  props: {
-    product: {
-      type: Object,
-      required: true
-    }
-  }
-}
+<script setup lang="ts">
+import type { Product, WithId } from '@/types/models'
+
+defineProps<{ product: WithId<Product> }>()
 </script>
 
-<style lang="scss" scoped>
 
-</style>
