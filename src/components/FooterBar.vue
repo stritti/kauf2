@@ -173,4 +173,14 @@ const currentUrl = window.location.href
       filter: grayscale(80%);
     }
   }
+
+  // Cookie banner has a light background, so its text must be dark —
+  // it otherwise inherits the light text color from the dark footer.
+  #cookie-banner {
+    color: $dark;
+
+    a {
+      color: $dark;
+    }
+  }
 </style>
