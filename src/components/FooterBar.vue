@@ -61,7 +61,7 @@
               Presse
             </router-link>
             <router-link
-              to="/impessum"
+              to="/impressum"
               class="nav-link"
             >
               Impressum
