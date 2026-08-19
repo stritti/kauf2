@@ -13,7 +13,10 @@
         />
       </b-navbar-brand>
 
-      <b-navbar-toggle target="nav-collapse" class="ms-auto" />
+      <b-navbar-toggle
+        target="nav-collapse"
+        class="ms-auto"
+      />
 
       <b-collapse
         id="nav-collapse"
@@ -38,12 +41,7 @@
   </b-navbar>
 </template>
 
-<script>
-export default {
-  name: 'NavBar'
 
-}
-</script>
 
 <style lang="scss">
   .logo {

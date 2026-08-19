@@ -125,13 +125,12 @@
       &copy; 2015 - {{ year }} Aktion kauf2: {{ currentUrl }}
     </b-container>
     <vue-cookie-accept-decline
-      :ref="'cookie-banner'"
-      :element-id="'cookie-banner'"
+      element-id="cookie-banner"
       :debug="false"
-      :position="'bottom'"
-      :type="'bar'"
+      position="bottom"
+      type="bar"
       :disable-decline="true"
-      :transition-name="'slideFromBottom'"
+      transition-name="slideFromBottom"
       :show-postpone-button="false"
       class="d-print-none"
     >
@@ -148,24 +147,12 @@
   </footer>
 </template>
 
-<script>
+<script setup lang="ts">
 import VueCookieAcceptDecline from 'vue-cookie-accept-decline'
 import 'vue-cookie-accept-decline/dist/vue-cookie-accept-decline.css'
 
-export default {
-  name: 'FooterBar',
-  components: { VueCookieAcceptDecline },
-  data() {
-    return {
-      currentUrl: '',
-      year: null
-    }
-  },
-  created() {
-    this.currentUrl = window.location.href
-    this.year = new Date().getFullYear()
-  }
-}
+const year = new Date().getFullYear()
+const currentUrl = window.location.href
 </script>
 
 <style lang="scss">

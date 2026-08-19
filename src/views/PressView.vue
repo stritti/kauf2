@@ -44,14 +44,8 @@
   </b-container>
 </template>
 
-<script>
+<script setup lang="ts">
 import { useHead } from '@unhead/vue'
 
-export default {
-  setup() {
-    useHead({
-      title: 'Presse'
-    })
-  }
-}
+useHead({ title: 'Presse' })
 </script>

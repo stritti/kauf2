@@ -146,27 +146,14 @@
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
 import { useHead } from '@unhead/vue'
 import SupporterList from '@/components/supporter/SupporterList.vue'
-import ParallaxImage from '../components/ParallaxImage.vue'
+import ParallaxImage from '@/components/ParallaxImage.vue'
 
-export default {
-  name: 'Home',
-  components: {
-    SupporterList,
-    ParallaxImage
-  },
-  setup() {
-    useHead({
-      title: 'Aktion kauf2'
-    })
+useHead({ title: 'Aktion kauf2' })
 
-    return {
-      numberSupporter: 3
-    }
-  }
-}
+const numberSupporter = 3
 </script>
 
 <style lang="scss" scoped>

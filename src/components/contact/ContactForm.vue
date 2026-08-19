@@ -50,33 +50,38 @@
       Die Nachricht wurde erfolgreich versendet.<br>
       Vielen Dank für ihre Nachricht!
     </b-alert>
+    <b-alert
+      v-if="errorSubmit"
+      variant="danger"
+      class="my-5"
+      show
+    >
+      Beim Senden der Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.
+    </b-alert>
   </div>
 </template>
 
-<script>
-import contactService from '@/services/contact.service'
-export default {
-  name: 'CreateForm',
-  data () {
-    return {
-      contact: {},
-      showForm: true,
-      success: false,
-      errorSubmit: null
-    }
-  },
-  methods: {
-    onSubmit (event) {
-      event.preventDefault()
-      this.showForm = false
-      contactService.send(this.contact).then(() => {
-        this.success = true
-      })
-    }
+<script setup lang="ts">
+import { reactive, ref } from 'vue'
+import { contactService } from '@/services/contact.service'
+import type { ContactMessage } from '@/types/models'
+
+const contact = reactive<ContactMessage>({ Name: '', Email: '', Notes: '' })
+const showForm = ref(true)
+const success = ref(false)
+const errorSubmit = ref<string | null>(null)
+
+async function onSubmit(event: Event) {
+  event.preventDefault()
+  showForm.value = false
+  try {
+    await contactService.send(contact)
+    success.value = true
+  } catch (error) {
+    errorSubmit.value = error instanceof Error ? error.message : String(error)
+    showForm.value = true
   }
 }
 </script>
 
-<style>
 
-</style>

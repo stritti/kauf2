@@ -8,20 +8,15 @@
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
 import { useHead } from '@unhead/vue'
 import NavBar from '@/components/NavBar.vue'
 import FooterBar from '@/components/FooterBar.vue'
 
-export default {
-  components: { NavBar, FooterBar },
-  setup() {
-    useHead({
-      title: 'Kauf2',
-      titleTemplate: '%s | Aktion Kauf2'
-    })
-  }
-}
+useHead({
+  title: 'Kauf2',
+  titleTemplate: '%s | Aktion Kauf2'
+})
 </script>
 
 <style lang="scss">

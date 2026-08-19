@@ -70,13 +70,14 @@
         <b-col cols="4">
           <QrcodeVue
             :size="120"
-            :value="`https://www.aktion-kauf2.de/?utm_source=QRCode&utm_medium=Plakat&utm_campaign=Plakat&utm_content=${encodeURIComponent(supporter.Name)}`"
+            :value="`https://www.aktion-kauf2.de/?utm_source=QRCode&utm_medium=Plakat&utm_campaign=Plakat&utm_content=${encodeURIComponent(supporter?.Name ?? '')}`"
           />
         </b-col>
         <b-col align-self="start">
           <b-row>
             <b-col cols="4">
               <b-img
+                v-if="supporter?.Logo?.[0]?.thumbnails?.large?.url"
                 class="poster__supporter-logo"
                 :src="supporter.Logo[0].thumbnails.large.url"
                 fluid
@@ -84,16 +85,16 @@
             </b-col>
             <b-col>
               <h3 class="supporter-card__name">
-                {{ supporter.Name }}
+                {{ supporter?.Name }}
               </h3>
-              <div v-if="supporter.Street">
+              <div v-if="supporter?.Street">
                 {{ supporter.Street }}
               </div>
-              <div v-if="supporter.Zip || supporter.City">
-                <span v-if="supporter.Zip">{{ supporter.Zip }}&nbsp;</span>
-                <span v-if="supporter.City">{{ supporter.City }}</span>
+              <div v-if="supporter?.Zip || supporter?.City">
+                <span v-if="supporter?.Zip">{{ supporter.Zip }}&nbsp;</span>
+                <span v-if="supporter?.City">{{ supporter.City }}</span>
               </div>
-              <div v-if="supporter.Website">
+              <div v-if="supporter?.Website">
                 <a
                   :href="supporter.Website"
                   target="_blank"
@@ -108,40 +109,24 @@
   </b-container>
 </template>
 
-<script>
-import supporterService from '@/services/supporter.service'
+<script setup lang="ts">
+import { useHead } from '@unhead/vue'
+import { watch } from 'vue'
+import { useSupporter } from '@/composables/useSupporter'
 import QrcodeVue from 'qrcode.vue'
 
-export default {
-  name: 'SupporterPosterView',
-  components: {
-    QrcodeVue
-  },
-  props: {
-    supporterId: {
-      type: String,
-      required: true
-    }
-  },
-  data () {
-    return {
-      supporter: null
-    }
-  },
-  mounted () {
-    this.fetchSupporter()
-  },
-  methods: {
-    fetchSupporter () {
-      supporterService.getSupporter(this.supporterId).then(supporter => {
-        this.supporter = supporter
-        setTimeout(() => {
-          window.print()
-        }, 1000)
-      })
-    }
+const props = defineProps<{ supporterId: string }>()
+
+useHead({ title: 'Poster' })
+
+const { supporter } = useSupporter(props.supporterId)
+
+// Trigger browser print dialog once the supporter data is available
+watch(supporter, (value) => {
+  if (value) {
+    setTimeout(() => window.print(), 1000)
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

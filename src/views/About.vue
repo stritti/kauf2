@@ -29,14 +29,8 @@
   </b-container>
 </template>
 
-<script>
+<script setup lang="ts">
 import { useHead } from '@unhead/vue'
 
-export default {
-  setup() {
-    useHead({
-      title: 'Über Kauf2'
-    })
-  }
-}
+useHead({ title: 'Über Kauf2' })
 </script>

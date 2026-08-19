@@ -5,17 +5,8 @@
   />
 </template>
 
-<script>
-export default {
-  name: 'ParallaxImage',
-  props: {
-    src: {
-      type: String,
-      required: true
-    }
-  }
-
-}
+<script setup lang="ts">
+defineProps<{ src: string }>()
 </script>
 
 <style lang="scss" scoped>

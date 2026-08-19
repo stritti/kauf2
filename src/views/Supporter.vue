@@ -20,17 +20,9 @@
   </b-container>
 </template>
 
-<script>
+<script setup lang="ts">
 import { useHead } from '@unhead/vue'
 import SupporterList from '@/components/supporter/SupporterList.vue'
 
-export default {
-  name: 'Supporter',
-  components: { SupporterList },
-  setup() {
-    useHead({
-      title: 'Unterstützer der Aktion kauf2'
-    })
-  }
-}
+useHead({ title: 'Unterstützer der Aktion kauf2' })
 </script>

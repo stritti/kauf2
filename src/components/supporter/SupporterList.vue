@@ -38,54 +38,22 @@
   </div>
 </template>
 
-<script>
-import supporterService from '@/services/supporter.service'
+<script setup lang="ts">
+import { useAirtableList } from '@/composables/useAirtableList'
+import { supporterService } from '@/services/supporter.service'
+import { getRandom } from '@/utils/random'
 import ListItem from './ListItem.vue'
-export default {
-  name: 'List',
-  components: { ListItem },
-  props: {
-    randomNumber: {
-      type: Number,
-      required: false,
-      default: null
-    }
+import type { Supporter, WithId } from '@/types/models'
+
+const props = defineProps<{ randomNumber?: number | null }>()
+
+const { list: supporterList } = useAirtableList<WithId<Supporter>>(
+  async () => {
+    const result = await supporterService.getList()
+    return props.randomNumber ? getRandom(result, props.randomNumber) : result
   },
-  data () {
-    return {
-      supporterList: null
-    }
-  },
-  created () {
-    supporterService.getList()
-      .then(result => {
-        if (this.randomNumber) {
-          this.supporterList = this.getRandom(result, this.randomNumber)
-        } else {
-          this.supporterList = result
-        }
-      })
-      .catch(error => {
-        console.error('Fehler beim Laden der Unterstützer-Daten:', error)
-        // Set empty array to stop loading spinner
-        this.supporterList = []
-      })
-  },
-  methods: {
-    getRandom (arr, n) {
-      const result = new Array(n)
-      let len = arr.length
-      const taken = new Array(len)
-      if (n > len) { throw new RangeError('getRandom: more elements taken than available') }
-      while (n--) {
-        const x = Math.floor(Math.random() * len)
-        result[n] = arr[x in taken ? taken[x] : x]
-        taken[x] = --len in taken ? taken[len] : len
-      }
-      return result
-    }
-  }
-}
+  'Fehler beim Laden der Unterstützer-Daten'
+)
 </script>
 
 <style lang="scss">

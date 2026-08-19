@@ -43,36 +43,17 @@
     </b-card-group>
   </b-container>
 </template>
-<script>
+<script setup lang="ts">
 import { useHead } from '@unhead/vue'
-import { ref, onMounted } from 'vue'
+import { useAirtableList } from '@/composables/useAirtableList'
+import { productCategoryService } from '@/services/productCategory.service'
 import ProductList from '@/components/product/ProductList.vue'
-import productCategoryService from '@/services/productCategory.service'
+import type { ProductCategory, WithId } from '@/types/models'
 
-export default {
-  name: 'Products',
-  components: { ProductList },
-  setup() {
-    useHead({
-      title: 'Übersicht von Produkten'
-    })
+useHead({ title: 'Übersicht von Produkten' })
 
-    const productCategoryList = ref([])
-
-    onMounted(() => {
-      productCategoryService.getList()
-        .then(result => {
-          productCategoryList.value = result
-        })
-        .catch(error => {
-          console.error('Fehler beim Laden der Produktkategorien:', error)
-          productCategoryList.value = []
-        })
-    })
-
-    return {
-      productCategoryList
-    }
-  }
-}
+const { list: productCategoryList } = useAirtableList<WithId<ProductCategory>>(
+  () => productCategoryService.getList(),
+  'Fehler beim Laden der Produktkategorien'
+)
 </script>

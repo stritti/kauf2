@@ -214,17 +214,10 @@
   </b-container>
 </template>
 
-<script>
+<script setup lang="ts">
 import { useHead } from '@unhead/vue'
 
-export default {
-  name: 'Privacy',
-  setup() {
-    useHead({
-      title: 'Datenschutz'
-    })
-  }
-}
+useHead({ title: 'Datenschutz' })
 </script>
 
 <style lang="scss">
