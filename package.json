@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@unhead/vue": "^1.11.16",
-    "axios": "^1.10.0",
+    "axios": "^1.19.0",
     "bootstrap": "^5.3.3",
     "bootstrap-vue-next": "^0.42.0",
     "core-js": "^3.50.0",
